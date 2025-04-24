@@ -9,6 +9,10 @@ import ProceduresSection from "@/components/procedures-section";
 import ParallaxQuoteSection from "@/components/parallax-quote-section";
 import AnimatedTestimonials from "@/components/animated-testimonials";
 
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import AnimatedBeforeAfter from "@/components/animated-before-after";
+
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
@@ -138,13 +142,54 @@ export default function Home() {
       <section id="depoimentos" className="w-full bg-[#f8f9fa] py-16">
         <div className="container px-4 md:px-6">
           <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold text-[#2c3e50]">Depoimentos de Pacientes</h2>
-            <p className="mt-2 text-[#7f8c8d]">Veja o que nossos pacientes dizem sobre seus resultados</p>
+            <h2 className="text-3xl font-bold text-[#2c3e50]">
+              Depoimentos de Pacientes
+            </h2>
+            <p className="mt-2 text-[#7f8c8d]">
+              Veja o que nossos pacientes dizem sobre seus resultados
+            </p>
           </div>
           <AnimatedTestimonials />
         </div>
       </section>
 
+      {/* Before and After Section with Animation */}
+      <section id="antes-depois" className="w-full bg-white py-16">
+        <div className="container px-4 md:px-6">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold text-[#2c3e50]">
+              Antes e Depois
+            </h2>
+            <p className="mt-2 text-[#7f8c8d]">
+              Resultados reais de procedimentos realizados pelo Dr. Marcos
+              Storion
+            </p>
+            <p className="mt-1 text-xs text-[#95a5a6]">
+              (Todas as imagens publicadas com autorização dos pacientes)
+            </p>
+          </div>
+          <Tabs defaultValue="lipoHD" className="mx-auto max-w-4xl">
+            <TabsList className="grid w-full grid-cols-4">
+              <TabsTrigger value="lipoHD">Lipo HD</TabsTrigger>
+              <TabsTrigger value="rinoplastia">Rinoplastia</TabsTrigger>
+              <TabsTrigger value="mamoplastia">Mamoplastia</TabsTrigger>
+              <TabsTrigger value="facial">Harmonização</TabsTrigger>
+            </TabsList>
+            <TabsContent value="lipoHD">
+              <AnimatedBeforeAfter category="lipoHD" />
+            </TabsContent>
+            <TabsContent value="rinoplastia">
+              <AnimatedBeforeAfter category="rinoplastia" />
+            </TabsContent>
+            <TabsContent value="mamoplastia">
+              <AnimatedBeforeAfter category="mamoplastia" />
+            </TabsContent>
+            <TabsContent value="facial">
+              <AnimatedBeforeAfter category="facial" />
+            </TabsContent>
+          </Tabs>
+        </div>
+      </section>
     </main>
   );
 }
