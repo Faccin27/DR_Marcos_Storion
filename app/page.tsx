@@ -14,6 +14,9 @@ import AnimatedTestimonials from "@/components/animated-testimonials";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedBeforeAfter from "@/components/animated-before-after";
 import FAQAccordion from "@/components/faq-accordion";
+import ContactForm from "@/components/contact-form";
+import ContactInfo from "@/components/contact-info";
+import MultiLocationMap from "@/components/multi-location-map";
 
 export default function Home() {
   return (
@@ -249,6 +252,28 @@ export default function Home() {
           </div>
           <div className="mx-auto max-w-3xl">
             <FAQAccordion />
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" className="w-full bg-[#f8f9fa] py-16">
+        <div className="container px-4 md:px-6">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold text-[#2c3e50]">Entre em Contato</h2>
+            <p className="mt-2 text-[#7f8c8d]">Estamos prontos para atender você</p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <div>
+              <ContactForm />
+            </div>
+            <div>
+              <ContactInfo />
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <MultiLocationMap />
           </div>
         </div>
       </section>
