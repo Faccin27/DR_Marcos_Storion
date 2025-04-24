@@ -1,8 +1,9 @@
 import type React from "react";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,6 +19,38 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <Head>
+        {/* SEO Básico */}
+        <title>Dr. Marcos Storion - Cirurgião Plástico</title>
+        <meta
+          name="description"
+          content="Cirurgião Plástico Especialista em Estética Facial e Corporal"
+        />
+        {/* Open Graph / WhatsApp / Discord ETC */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Dr. Marcos Storion - Cirurgião Plástico"
+        />
+        <meta
+          property="og:description"
+          content="Cirurgião Plástico Especialista em Estética Facial e Corporal"
+        />
+        <meta property="og:image" content="/images/doctor.jpeg" />
+        <meta property="og:url" content="javascript:;" />{" "}
+        {/* aqui bota o  URL do site */}
+        {/* twitter card + aplicaveis*/}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Dr. Marcos Storion - Cirurgião Plástico"
+        />
+        <meta
+          name="twitter:description"
+          content="Cirurgião Plástico Especialista em Estética Facial e Corporal"
+        />
+        <meta name="twitter:image" content="/images/doctor.jpeg" />
+      </Head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
