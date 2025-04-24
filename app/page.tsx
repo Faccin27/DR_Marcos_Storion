@@ -1,6 +1,8 @@
 "use client";
 
 import { Users, Award, Calendar, Smile, CheckCircle } from "lucide-react";
+import { motion } from "framer-motion"
+
 
 import AnimatedCounter from "@/components/animated-counter";
 import HeroSection from "@/components/hero-section";
@@ -9,9 +11,8 @@ import ProceduresSection from "@/components/procedures-section";
 import ParallaxQuoteSection from "@/components/parallax-quote-section";
 import AnimatedTestimonials from "@/components/animated-testimonials";
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedBeforeAfter from "@/components/animated-before-after";
-
 
 export default function Home() {
   return (
@@ -188,6 +189,54 @@ export default function Home() {
               <AnimatedBeforeAfter category="facial" />
             </TabsContent>
           </Tabs>
+        </div>
+      </section>
+
+      <section className="w-full bg-[#f8f9fa] py-16">
+        <div className="container px-4 md:px-6">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold text-[#2c3e50]">Diferenciais da Clínica</h2>
+            <p className="mt-2 text-[#7f8c8d]">Por que escolher o Dr. Marcos Storion</p>
+          </div>
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                title: "Equipamentos Modernos",
+                description: "Tecnologia de ponta para procedimentos mais seguros e resultados superiores.",
+                index: 0,
+              },
+              {
+                title: "Equipe Multidisciplinar",
+                description: "Profissionais especializados para um cuidado completo antes, durante e após a cirurgia.",
+                index: 1,
+              },
+              {
+                title: "Localização Privilegiada",
+                description: "Clínica em área nobre com fácil acesso e estacionamento para sua comodidade.",
+                index: 2,
+              },
+              {
+                title: "Atendimento Humanizado",
+                description: "Cuidado personalizado e acolhedor, respeitando a individualidade de cada paciente.",
+                index: 3,
+              },
+            ].map((item) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: item.index * 0.1 }}
+                className="group overflow-hidden rounded-xl bg-white p-6 shadow-xl transition-all hover:-translate-y-2"
+              >
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-[#f8f5e6] transition-all group-hover:bg-[#d4af37]/20">
+                  <CheckCircle className="h-8 w-8 text-[#d4af37]" />
+                </div>
+                <h3 className="mb-2 text-xl font-semibold text-[#2c3e50]">{item.title}</h3>
+                <p className="text-[#7f8c8d]">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </main>
