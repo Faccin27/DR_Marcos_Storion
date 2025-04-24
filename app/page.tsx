@@ -6,6 +6,7 @@ import AnimatedCounter from "@/components/animated-counter";
 import HeroSection from "@/components/hero-section";
 import SiteHeader from "@/components/site-header";
 import ProceduresSection from "@/components/procedures-section";
+import ParallaxQuoteSection from "@/components/parallax-quote-section";
 
 export default function Home() {
   return (
@@ -45,6 +46,13 @@ export default function Home() {
       </section>
 
       <ProceduresSection />
+
+      {/* Parallax Quote */}
+      <ParallaxQuoteSection
+        quote="A beleza está nos olhos de quem vê, mas a confiança vem de dentro."
+        author="Dr. Marcos Storion"
+        backgroundOption={1}
+      />
     </main>
   );
 }
