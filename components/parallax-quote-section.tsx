@@ -1,29 +1,31 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 interface ParallaxQuoteSectionProps {
-  quote: string
-  author: string
-  backgroundOption?: number
+  quote: string;
+  author: string;
+  backgroundOption?: number;
 }
 
-export default function ParallaxQuoteSection({ quote, author, backgroundOption = 1 }: ParallaxQuoteSectionProps) {
-  const ref = useRef<HTMLDivElement>(null)
+export default function ParallaxQuoteSection({
+  quote,
+  author,
+  backgroundOption = 1,
+}: ParallaxQuoteSectionProps) {
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start end", "end start"],
-  })
+  });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6])
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6]);
 
   const backgrounds = [
     "linear-gradient(to right, rgba(44, 62, 80, 0.8), rgba(26, 37, 47, 0.2)), url('/images/service.jpg')",
-
-
-  ]
+  ];
 
   return (
     <section ref={ref} className="relative overflow-hidden py-24 md:py-32">
@@ -51,7 +53,9 @@ export default function ParallaxQuoteSection({ quote, author, backgroundOption =
               <div className="h-0.5 w-16 bg-[#d4af37]"></div>
             </div>
 
-            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">"{quote}"</h2>
+            <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
+              "{quote}"
+            </h2>
 
             <div className="flex justify-center">
               <div className="h-0.5 w-16 bg-[#d4af37]"></div>
@@ -62,5 +66,5 @@ export default function ParallaxQuoteSection({ quote, author, backgroundOption =
         </div>
       </div>
     </section>
-  )
+  );
 }

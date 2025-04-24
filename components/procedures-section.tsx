@@ -1,18 +1,19 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import AnimatedServiceCard from "./animated-service-card"
-import AllProcedures from "./all-procedures"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import AnimatedServiceCard from "./animated-service-card";
+import AllProcedures from "./all-procedures";
 
 export default function ProceduresSection() {
-  const [showAllProcedures, setShowAllProcedures] = useState(false)
+  const [showAllProcedures, setShowAllProcedures] = useState(false);
 
   const featuredProcedures = [
     {
       title: "Lipo HD",
-      description: "Lipoaspiração de alta definição para resultados mais precisos e naturais.",
+      description:
+        "Lipoaspiração de alta definição para resultados mais precisos e naturais.",
       icon: "Droplets",
       index: 0,
     },
@@ -24,29 +25,40 @@ export default function ProceduresSection() {
     },
     {
       title: "Prótese de Mama",
-      description: "Aumento mamário com implantes de silicone de alta qualidade.",
+      description:
+        "Aumento mamário com implantes de silicone de alta qualidade.",
       icon: "Heart",
       index: 2,
     },
     {
       title: "Harmonização Facial",
-      description: "Procedimentos combinados para equilibrar as proporções faciais.",
+      description:
+        "Procedimentos combinados para equilibrar as proporções faciais.",
       icon: "Sparkles",
       index: 3,
     },
-  ]
+  ];
 
   return (
     <section id="servicos" className="w-full bg-[#f8f9fa] py-16">
       <div className="container px-4 md:px-6">
         <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold text-[#2c3e50]">Serviços Oferecidos</h2>
-          <p className="mt-2 text-[#7f8c8d]">Conheça os procedimentos realizados pelo Dr. Marcos Storion</p>
+          <h2 className="text-3xl font-bold text-[#2c3e50]">
+            Serviços Oferecidos
+          </h2>
+          <p className="mt-2 text-[#7f8c8d]">
+            Conheça os procedimentos realizados pelo Dr. Marcos Storion
+          </p>
         </div>
 
         <AnimatePresence mode="wait">
           {!showAllProcedures ? (
-            <motion.div key="featured" initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
+            <motion.div
+              key="featured"
+              initial={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {featuredProcedures.map((procedure) => (
                   <AnimatedServiceCard
@@ -89,5 +101,5 @@ export default function ProceduresSection() {
         </AnimatePresence>
       </div>
     </section>
-  )
+  );
 }

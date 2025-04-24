@@ -1,42 +1,42 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import Image from "next/image"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"])
-  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0])
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
   // Particulas
-  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     const particles: {
-      x: number
-      y: number
-      size: number
-      speedX: number
-      speedY: number
-      opacity: number
-    }[] = []
+      x: number;
+      y: number;
+      size: number;
+      speedX: number;
+      speedY: number;
+      opacity: number;
+    }[] = [];
 
     const createParticles = () => {
       for (let i = 0; i < 50; i++) {
@@ -47,52 +47,59 @@ export default function HeroSection() {
           speedX: Math.random() * 0.5 - 0.25,
           speedY: Math.random() * 0.5 - 0.25,
           opacity: Math.random() * 0.5 + 0.1,
-        })
+        });
       }
-    }
+    };
 
     const animateParticles = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (let i = 0; i < particles.length; i++) {
-        const p = particles[i]
-        ctx.fillStyle = `rgba(212, 175, 55, ${p.opacity})`
-        ctx.beginPath()
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
-        ctx.fill()
+        const p = particles[i];
+        ctx.fillStyle = `rgba(212, 175, 55, ${p.opacity})`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
 
-        p.x += p.speedX
-        p.y += p.speedY
+        p.x += p.speedX;
+        p.y += p.speedY;
 
-        if (p.x > canvas.width) p.x = 0
-        if (p.x < 0) p.x = canvas.width
-        if (p.y > canvas.height) p.y = 0
-        if (p.y < 0) p.y = canvas.height
+        if (p.x > canvas.width) p.x = 0;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.y > canvas.height) p.y = 0;
+        if (p.y < 0) p.y = canvas.height;
       }
 
-      requestAnimationFrame(animateParticles)
-    }
+      requestAnimationFrame(animateParticles);
+    };
 
     const handleResize = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-      particles.length = 0
-      createParticles()
-    }
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      particles.length = 0;
+      createParticles();
+    };
 
-    createParticles()
-    animateParticles()
+    createParticles();
+    animateParticles();
 
-    window.addEventListener("resize", handleResize)
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <section ref={ref} className="relative h-screen w-full overflow-hidden bg-[#2c3e50]">
-      <canvas ref={canvasRef} className="absolute inset-0 z-0" style={{ pointerEvents: "none" }} />
+    <section
+      ref={ref}
+      className="relative h-screen w-full overflow-hidden bg-[#2c3e50]"
+    >
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 z-0"
+        style={{ pointerEvents: "none" }}
+      />
 
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#2c3e50]/70 to-[#1a252f]/90" />
 
@@ -112,7 +119,9 @@ export default function HeroSection() {
                 <p className="text-xl font-medium text-gray-200 md:text-2xl">
                   Cirurgião Plástico Especialista em Estética Facial e Corporal
                 </p>
-                <p className="text-lg italic text-gray-300">"Transformando autoestima com segurança e excelência"</p>
+                <p className="text-lg italic text-gray-300">
+                  "Transformando autoestima com segurança e excelência"
+                </p>
               </motion.div>
 
               <motion.div
@@ -175,5 +184,5 @@ export default function HeroSection() {
         </motion.div>
       </motion.div>
     </section>
-  )
+  );
 }

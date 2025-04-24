@@ -1,46 +1,55 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState, useEffect, useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface AnimatedCounterProps {
-  end: number
-  duration?: number
-  label: string
-  icon?: React.ReactNode
-  suffix?: string
+  end: number;
+  duration?: number;
+  label: string;
+  icon?: React.ReactNode;
+  suffix?: string;
 }
 
-export default function AnimatedCounter({ end, duration = 2, label, icon, suffix = "" }: AnimatedCounterProps) {
-  const [count, setCount] = useState(0)
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-  const [hasAnimated, setHasAnimated] = useState(false)
+export default function AnimatedCounter({
+  end,
+  duration = 2,
+  label,
+  icon,
+  suffix = "",
+}: AnimatedCounterProps) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
     if (isInView && !hasAnimated) {
-      let startTime: number
-      let animationFrame: number
+      let startTime: number;
+      let animationFrame: number;
 
       const step = (timestamp: number) => {
-        if (!startTime) startTime = timestamp
-        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1)
-        setCount(Math.floor(progress * end))
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min(
+          (timestamp - startTime) / (duration * 1000),
+          1
+        );
+        setCount(Math.floor(progress * end));
 
         if (progress < 1) {
-          animationFrame = requestAnimationFrame(step)
+          animationFrame = requestAnimationFrame(step);
         } else {
-          setHasAnimated(true)
+          setHasAnimated(true);
         }
-      }
+      };
 
-      animationFrame = requestAnimationFrame(step)
+      animationFrame = requestAnimationFrame(step);
 
-      return () => cancelAnimationFrame(animationFrame)
+      return () => cancelAnimationFrame(animationFrame);
     }
-  }, [isInView, end, duration, hasAnimated])
+  }, [isInView, end, duration, hasAnimated]);
 
   return (
     <motion.div
@@ -59,5 +68,5 @@ export default function AnimatedCounter({ end, duration = 2, label, icon, suffix
         <p className="text-[#7f8c8d]">{label}</p>
       </div>
     </motion.div>
-  )
+  );
 }

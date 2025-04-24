@@ -1,30 +1,35 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight } from "lucide-react"
-import ProcedureModal from "./procedure-modal"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import ProcedureModal from "./procedure-modal";
 
 interface Procedure {
-  id: string
-  title: string
-  shortDescription: string
-  fullDescription: string
-  icon?: string
-  image?: string
-  category: "face" | "body" | "breast" | "other"
+  id: string;
+  title: string;
+  shortDescription: string;
+  fullDescription: string;
+  icon?: string;
+  image?: string;
+  category: "face" | "body" | "breast" | "other";
 }
 
 export default function AllProcedures() {
-  const [activeTab, setActiveTab] = useState<"all" | "face" | "body" | "breast" | "other">("all")
-  const [selectedProcedure, setSelectedProcedure] = useState<Procedure | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [activeTab, setActiveTab] = useState<
+    "all" | "face" | "body" | "breast" | "other"
+  >("all");
+  const [selectedProcedure, setSelectedProcedure] = useState<Procedure | null>(
+    null
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const procedures: Procedure[] = [
     {
       id: "deep-plane-facelift",
       title: "Deep Plane FaceLift",
-      shortDescription: "Técnica avançada de rejuvenescimento facial com resultados naturais e duradouros.",
+      shortDescription:
+        "Técnica avançada de rejuvenescimento facial com resultados naturais e duradouros.",
       fullDescription: `O Deep Plane FaceLift é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
 
       Diferente das técnicas tradicionais, o Deep Plane FaceLift reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
@@ -38,7 +43,8 @@ export default function AllProcedures() {
     {
       id: "neck-lift",
       title: "Neck Lift",
-      shortDescription: "Procedimento para rejuvenescer e redefinir o contorno do pescoço.",
+      shortDescription:
+        "Procedimento para rejuvenescer e redefinir o contorno do pescoço.",
       fullDescription: `O Neck Lift, ou ritidoplastia cervical, é um procedimento cirúrgico destinado a melhorar os sinais visíveis de envelhecimento no pescoço e na linha da mandíbula.
 
       Este procedimento trata especificamente o excesso de pele e gordura sob o queixo, as bandas platismais (cordas verticais no pescoço) e a flacidez da pele do pescoço, criando um contorno mais definido e jovem.
@@ -52,7 +58,8 @@ export default function AllProcedures() {
     {
       id: "facelift",
       title: "FaceLift",
-      shortDescription: "Rejuvenescimento facial completo para uma aparência mais jovem e natural.",
+      shortDescription:
+        "Rejuvenescimento facial completo para uma aparência mais jovem e natural.",
       fullDescription: `O FaceLift, ou ritidoplastia, é um procedimento cirúrgico que visa rejuvenescer a face, tratando os sinais de envelhecimento como flacidez, rugas e perda de volume.
 
       Durante o procedimento, o Dr. Marcos Storion reposiciona os tecidos faciais, remove o excesso de pele e, quando necessário, redistribui ou adiciona volume para restaurar o contorno facial jovem.
@@ -66,7 +73,8 @@ export default function AllProcedures() {
     {
       id: "blefaroplastia",
       title: "Blefaroplastia",
-      shortDescription: "Correção estética das pálpebras para um olhar mais descansado e jovem.",
+      shortDescription:
+        "Correção estética das pálpebras para um olhar mais descansado e jovem.",
       fullDescription: `A Blefaroplastia é uma cirurgia plástica que visa melhorar a aparência das pálpebras superiores e/ou inferiores, removendo o excesso de pele, gordura e, em alguns casos, fortalecendo os músculos.
 
       Este procedimento é ideal para pacientes que apresentam pálpebras caídas, bolsas sob os olhos ou excesso de pele nas pálpebras, características que podem conferir um aspecto cansado ou envelhecido.
@@ -94,7 +102,8 @@ export default function AllProcedures() {
     {
       id: "otoplastia",
       title: "Otoplastia",
-      shortDescription: "Correção estética das orelhas para um contorno mais harmonioso.",
+      shortDescription:
+        "Correção estética das orelhas para um contorno mais harmonioso.",
       fullDescription: `A Otoplastia é uma cirurgia plástica que visa corrigir a forma, posição ou proporção das orelhas. É especialmente indicada para orelhas proeminentes ("orelhas de abano"), mas também pode corrigir deformidades congênitas ou causadas por traumas.
 
       O procedimento envolve a remodelação da cartilagem da orelha e, quando necessário, a remoção de excesso de pele, permitindo que as orelhas fiquem mais próximas à cabeça e com formato mais harmonioso.
@@ -108,7 +117,8 @@ export default function AllProcedures() {
     {
       id: "mentoplastia",
       title: "Mentoplastia",
-      shortDescription: "Cirurgia para harmonização do queixo com o restante do rosto.",
+      shortDescription:
+        "Cirurgia para harmonização do queixo com o restante do rosto.",
       fullDescription: `A Mentoplastia é uma cirurgia plástica que visa melhorar o contorno e a projeção do queixo, harmonizando-o com as demais características faciais. Pode envolver o aumento do queixo com implantes ou a redução e remodelação do osso.
 
       Este procedimento é ideal para pacientes com queixo recuado (retrognatismo), queixo muito proeminente (prognatismo) ou assimetrias, contribuindo significativamente para o equilíbrio e harmonia facial.
@@ -122,7 +132,8 @@ export default function AllProcedures() {
     {
       id: "cirurgia-angulo-mandibula",
       title: "Cirurgia de Ângulo de Mandíbula",
-      shortDescription: "Procedimento para definir e contornar a linha da mandíbula.",
+      shortDescription:
+        "Procedimento para definir e contornar a linha da mandíbula.",
       fullDescription: `A Cirurgia de Ângulo de Mandíbula é um procedimento que visa melhorar o contorno e a definição da linha mandibular, criando um perfil facial mais harmônico e definido.
 
       Este procedimento pode envolver a colocação de implantes para aumentar a projeção do ângulo mandibular, a redução óssea para diminuir um ângulo muito proeminente, ou a correção de assimetrias.
@@ -136,7 +147,8 @@ export default function AllProcedures() {
     {
       id: "lipoaspiracao",
       title: "Lipoaspiração",
-      shortDescription: "Remoção de gordura localizada para contorno corporal mais definido.",
+      shortDescription:
+        "Remoção de gordura localizada para contorno corporal mais definido.",
       fullDescription: `A Lipoaspiração é um procedimento cirúrgico que remove depósitos de gordura localizada resistentes à dieta e exercícios, melhorando o contorno corporal.
 
       O Dr. Marcos Storion utiliza técnicas avançadas de lipoaspiração, incluindo a lipoaspiração HD (alta definição), que não apenas remove o excesso de gordura, mas também esculpe o corpo, criando definição muscular e contornos mais atléticos.
@@ -150,7 +162,8 @@ export default function AllProcedures() {
     {
       id: "mamoplastia-aumento",
       title: "Mamoplastia de Aumento",
-      shortDescription: "Aumento mamário com implantes de silicone de alta qualidade.",
+      shortDescription:
+        "Aumento mamário com implantes de silicone de alta qualidade.",
       fullDescription: `A Mamoplastia de Aumento é uma cirurgia plástica que visa aumentar o volume e melhorar a forma dos seios através da colocação de implantes mamários.
 
       O Dr. Marcos Storion utiliza implantes de silicone de última geração, com alta tecnologia e segurança, disponíveis em diferentes formatos, tamanhos e perfis para atender às necessidades e desejos específicos de cada paciente.
@@ -178,7 +191,8 @@ export default function AllProcedures() {
     {
       id: "lipoabdominoplastia",
       title: "Lipoabdominoplastia",
-      shortDescription: "Combinação de lipoaspiração e abdominoplastia para resultados superiores.",
+      shortDescription:
+        "Combinação de lipoaspiração e abdominoplastia para resultados superiores.",
       fullDescription: `A Lipoabdominoplastia é uma técnica cirúrgica avançada que combina os benefícios da lipoaspiração com os da abdominoplastia tradicional, proporcionando resultados superiores no contorno abdominal.
 
       Diferente da abdominoplastia convencional, esta técnica preserva melhor a vascularização da região, permitindo uma lipoaspiração mais ampla e segura do abdômen e áreas adjacentes, como flancos e costas.
@@ -192,7 +206,8 @@ export default function AllProcedures() {
     {
       id: "ninfoplastia",
       title: "Ninfoplastia",
-      shortDescription: "Cirurgia íntima feminina para redução ou remodelação dos pequenos lábios.",
+      shortDescription:
+        "Cirurgia íntima feminina para redução ou remodelação dos pequenos lábios.",
       fullDescription: `A Ninfoplastia, também conhecida como labioplastia, é uma cirurgia íntima feminina que visa reduzir ou remodelar os pequenos lábios (lábios menores) da vulva.
 
       Este procedimento é indicado para mulheres que apresentam hipertrofia (aumento) dos pequenos lábios, seja por razões congênitas, hormonais ou resultantes de partos, causando desconforto físico, dificuldades de higiene ou constrangimento estético.
@@ -206,7 +221,8 @@ export default function AllProcedures() {
     {
       id: "gluteoplastia",
       title: "Gluteoplastia",
-      shortDescription: "Aumento e modelagem dos glúteos para contorno mais definido.",
+      shortDescription:
+        "Aumento e modelagem dos glúteos para contorno mais definido.",
       fullDescription: `A Gluteoplastia é uma cirurgia plástica que visa aumentar o volume e melhorar o formato dos glúteos, proporcionando um contorno mais definido e harmonioso.
 
       O Dr. Marcos Storion realiza diferentes técnicas de gluteoplastia, incluindo o uso de implantes de silicone especiais para glúteos e a lipoenxertia (transferência de gordura), onde gordura do próprio paciente é removida de áreas com excesso, purificada e reinjetada nos glúteos.
@@ -220,7 +236,8 @@ export default function AllProcedures() {
     {
       id: "correcao-ginecomastia",
       title: "Correção de Ginecomastia",
-      shortDescription: "Tratamento cirúrgico para redução das mamas masculinas.",
+      shortDescription:
+        "Tratamento cirúrgico para redução das mamas masculinas.",
       fullDescription: `A Correção de Ginecomastia é uma cirurgia plástica que visa tratar o aumento anormal das mamas em homens, uma condição que pode causar desconforto físico e psicológico significativo.
 
       O procedimento pode envolver lipoaspiração para remover o excesso de gordura, excisão direta de tecido glandular, ou uma combinação de ambas as técnicas, dependendo da causa e gravidade da ginecomastia.
@@ -234,7 +251,8 @@ export default function AllProcedures() {
     {
       id: "implantes-panturrilha",
       title: "Implantes de Panturrilha",
-      shortDescription: "Aumento e definição das panturrilhas com implantes de silicone.",
+      shortDescription:
+        "Aumento e definição das panturrilhas com implantes de silicone.",
       fullDescription: `O Implante de Panturrilha é uma cirurgia plástica que visa aumentar o volume e melhorar o contorno das panturrilhas através da colocação de implantes de silicone especialmente desenvolvidos para esta região.
 
       Este procedimento é ideal para pacientes que desejam panturrilhas mais volumosas e definidas, seja por razões estéticas ou para corrigir assimetrias ou hipotrofias (desenvolvimento insuficiente) resultantes de condições congênitas ou adquiridas.
@@ -248,7 +266,8 @@ export default function AllProcedures() {
     {
       id: "lifting-bracos",
       title: "Lifting de Braços",
-      shortDescription: "Cirurgia para remover excesso de pele e gordura dos braços.",
+      shortDescription:
+        "Cirurgia para remover excesso de pele e gordura dos braços.",
       fullDescription: `O Lifting de Braços, ou braquioplastia, é uma cirurgia plástica que visa remover o excesso de pele e gordura dos braços, resultando em contornos mais definidos e firmes.
 
       Este procedimento é especialmente indicado para pacientes que apresentam flacidez significativa nos braços devido a grandes perdas de peso, envelhecimento natural ou fatores genéticos.
@@ -262,7 +281,8 @@ export default function AllProcedures() {
     {
       id: "lifting-coxas",
       title: "Lifting de Coxas",
-      shortDescription: "Cirurgia para remover excesso de pele e gordura das coxas.",
+      shortDescription:
+        "Cirurgia para remover excesso de pele e gordura das coxas.",
       fullDescription: `O Lifting de Coxas, ou cruroplastia, é uma cirurgia plástica que visa remover o excesso de pele e gordura das coxas, melhorando seu contorno e firmeza.
 
       Este procedimento é especialmente indicado para pacientes que apresentam flacidez significativa nas coxas devido a grandes perdas de peso, envelhecimento natural ou fatores genéticos.
@@ -273,19 +293,21 @@ export default function AllProcedures() {
       image: "/placeholder.svg?height=300&width=600",
       category: "body",
     },
-  ]
+  ];
 
   const openModal = (procedure: Procedure) => {
-    setSelectedProcedure(procedure)
-    setIsModalOpen(true)
-  }
+    setSelectedProcedure(procedure);
+    setIsModalOpen(true);
+  };
 
   const closeModal = () => {
-    setIsModalOpen(false)
-  }
+    setIsModalOpen(false);
+  };
 
   const filteredProcedures =
-    activeTab === "all" ? procedures : procedures.filter((procedure) => procedure.category === activeTab)
+    activeTab === "all"
+      ? procedures
+      : procedures.filter((procedure) => procedure.category === activeTab);
 
   return (
     <div className="w-full">
@@ -293,7 +315,9 @@ export default function AllProcedures() {
         <button
           onClick={() => setActiveTab("all")}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "all" ? "bg-[#d4af37] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            activeTab === "all"
+              ? "bg-[#d4af37] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Todos
@@ -301,7 +325,9 @@ export default function AllProcedures() {
         <button
           onClick={() => setActiveTab("face")}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "face" ? "bg-[#d4af37] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            activeTab === "face"
+              ? "bg-[#d4af37] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Face
@@ -309,7 +335,9 @@ export default function AllProcedures() {
         <button
           onClick={() => setActiveTab("body")}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "body" ? "bg-[#d4af37] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            activeTab === "body"
+              ? "bg-[#d4af37] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Corpo
@@ -317,7 +345,9 @@ export default function AllProcedures() {
         <button
           onClick={() => setActiveTab("breast")}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "breast" ? "bg-[#d4af37] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            activeTab === "breast"
+              ? "bg-[#d4af37] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Mama
@@ -325,7 +355,9 @@ export default function AllProcedures() {
         <button
           onClick={() => setActiveTab("other")}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "other" ? "bg-[#d4af37] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            activeTab === "other"
+              ? "bg-[#d4af37] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Outros
@@ -344,8 +376,12 @@ export default function AllProcedures() {
               className="h-full"
             >
               <div className="group flex h-full flex-col overflow-hidden rounded-xl bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
-                <h3 className="mb-3 text-xl font-bold text-[#2c3e50]">{procedure.title}</h3>
-                <p className="mb-6 flex-grow text-[#7f8c8d]">{procedure.shortDescription}</p>
+                <h3 className="mb-3 text-xl font-bold text-[#2c3e50]">
+                  {procedure.title}
+                </h3>
+                <p className="mb-6 flex-grow text-[#7f8c8d]">
+                  {procedure.shortDescription}
+                </p>
                 <button
                   onClick={() => openModal(procedure)}
                   className="mt-auto inline-flex items-center text-sm font-medium text-[#d4af37] hover:text-[#b8971f]"
@@ -369,5 +405,5 @@ export default function AllProcedures() {
         />
       )}
     </div>
-  )
+  );
 }

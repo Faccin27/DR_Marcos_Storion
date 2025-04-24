@@ -1,33 +1,39 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { X } from "lucide-react"
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X } from "lucide-react";
 
 interface ProcedureModalProps {
-  isOpen: boolean
-  onClose: () => void
-  title: string
-  description: string
-  image?: string
+  isOpen: boolean;
+  onClose: () => void;
+  title: string;
+  description: string;
+  image?: string;
 }
 
-export default function ProcedureModal({ isOpen, onClose, title, description, image }: ProcedureModalProps) {
-  const [isMounted, setIsMounted] = useState(false)
+export default function ProcedureModal({
+  isOpen,
+  onClose,
+  title,
+  description,
+  image,
+}: ProcedureModalProps) {
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true)
+    setIsMounted(true);
 
     if (isOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.body.style.overflow = "auto"
-    }
-  }, [isOpen])
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
 
-  if (!isMounted) return null
+  if (!isMounted) return null;
 
   return (
     <AnimatePresence>
@@ -66,7 +72,11 @@ export default function ProcedureModal({ isOpen, onClose, title, description, im
 
               {image && (
                 <div className="mb-6 overflow-hidden rounded-lg">
-                  <img src={image || "/placeholder.svg"} alt={title} className="h-auto w-full object-cover" />
+                  <img
+                    src={image || "/placeholder.svg"}
+                    alt={title}
+                    className="h-auto w-full object-cover"
+                  />
                 </div>
               )}
 
@@ -89,5 +99,5 @@ export default function ProcedureModal({ isOpen, onClose, title, description, im
         </>
       )}
     </AnimatePresence>
-  )
+  );
 }
