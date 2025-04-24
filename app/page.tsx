@@ -7,6 +7,7 @@ import HeroSection from "@/components/hero-section";
 import SiteHeader from "@/components/site-header";
 import ProceduresSection from "@/components/procedures-section";
 import ParallaxQuoteSection from "@/components/parallax-quote-section";
+import AnimatedTestimonials from "@/components/animated-testimonials";
 
 export default function Home() {
   return (
@@ -133,6 +134,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section id="depoimentos" className="w-full bg-[#f8f9fa] py-16">
+        <div className="container px-4 md:px-6">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold text-[#2c3e50]">Depoimentos de Pacientes</h2>
+            <p className="mt-2 text-[#7f8c8d]">Veja o que nossos pacientes dizem sobre seus resultados</p>
+          </div>
+          <AnimatedTestimonials />
+        </div>
+      </section>
+
     </main>
   );
 }
