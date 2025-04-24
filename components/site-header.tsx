@@ -25,7 +25,6 @@ export default function SiteHeader() {
   const pathname = usePathname()
   const [activeSection, setActiveSection] = useState("/")
 
-  // Handle scroll to detect when to change header style
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -35,7 +34,6 @@ export default function SiteHeader() {
       }
     }
 
-    // Detect active section based on scroll position
     const handleScrollForActiveSection = () => {
       const sections = navigation.map((item) => item.href.replace("/", "").replace("#", ""))
 
@@ -51,7 +49,6 @@ export default function SiteHeader() {
         }
       }
 
-      // If no section is active or we're at the top, set to home
       if (window.scrollY < 100) {
         setActiveSection("/")
       }
@@ -92,7 +89,6 @@ export default function SiteHeader() {
           </Link>
         </div>
 
-        {/* Mobile menu button */}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -107,7 +103,6 @@ export default function SiteHeader() {
           </button>
         </div>
 
-        {/* Desktop navigation */}
         <div className="hidden lg:flex lg:gap-x-8">
           {navigation.map((item) => (
             <Link
@@ -126,7 +121,7 @@ export default function SiteHeader() {
                   e.preventDefault()
                   const element = document.getElementById(item.href.split("#")[1])
                   if (element) {
-                    const yOffset = -80 // Header height offset
+                    const yOffset = -80 
                     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
                     window.scrollTo({ top: y, behavior: "smooth" })
                     setActiveSection(item.href)
@@ -150,7 +145,6 @@ export default function SiteHeader() {
           </Button>
         </div>
 
-        {/* Mobile menu, show/hide based on mobile menu state */}
         {mobileMenuOpen && (
           <div className="fixed inset-0 z-50 bg-white">
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm">
