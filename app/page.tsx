@@ -13,6 +13,7 @@ import AnimatedTestimonials from "@/components/animated-testimonials";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import AnimatedBeforeAfter from "@/components/animated-before-after";
+import FAQAccordion from "@/components/faq-accordion";
 
 export default function Home() {
   return (
@@ -236,6 +237,18 @@ export default function Home() {
                 <p className="text-[#7f8c8d]">{item.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="w-full bg-white py-16">
+        <div className="container px-4 md:px-6">
+          <div className="mb-10 text-center">
+            <h2 className="text-3xl font-bold text-[#2c3e50]">Dúvidas Frequentes</h2>
+            <p className="mt-2 text-[#7f8c8d]">Respostas para as perguntas mais comuns sobre os procedimentos</p>
+          </div>
+          <div className="mx-auto max-w-3xl">
+            <FAQAccordion />
           </div>
         </div>
       </section>
