@@ -51,15 +51,10 @@ export default function RootLayout({
         />
         <meta name="twitter:image" content="/images/doctor.jpeg" />
       </Head>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className={`${inter.className} overflow-x-hidden` }  >
+
           {children}
-        </ThemeProvider>
+
       </body>
     </html>
   );

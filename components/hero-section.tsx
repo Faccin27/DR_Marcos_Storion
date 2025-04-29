@@ -91,17 +91,14 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section
-      ref={ref}
-      className="relative h-screen w-full overflow-hidden bg-[#2c3e50]"
-    >
+    <section ref={ref} className="relative h-screen w-full  bg-[#2c3e50]">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0"
         style={{ pointerEvents: "none" }}
       />
-
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#2c3e50]/70 to-[#1a252f]/90" />
+      <Image src={"/images/banner1.jpg"} alt="" className="object-cover" fill />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#2c3e50]/70 via-[#1a252f]/80 to-[#1a252f]/90" />
 
       <motion.div style={{ y, opacity }} className="relative z-20 h-full">
         <div className="container flex h-full items-center px-4 md:px-6">
@@ -180,7 +177,7 @@ export default function HeroSection() {
           className="flex flex-col items-center"
         >
           <div className="h-10 w-[1px] bg-gradient-to-b from-transparent to-[#d4af37]" />
-          <div className="mt-2 h-2 w-2 rounded-full bg-[#d4af37]" />
+          <div className="mt-2 h-2 w-2 rounded-full bg-[#ffca1b]" />
         </motion.div>
       </motion.div>
     </section>
