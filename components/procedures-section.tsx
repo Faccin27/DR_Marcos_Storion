@@ -62,14 +62,14 @@ export default function ProceduresSection() {
 
     const animateParticles = () => {
       // Use a semi-transparent clear to create trails
-      ctx.fillStyle = "rgba(44, 62, 80, 1)"
+      ctx.fillStyle = "#FFF"
       ctx.fillRect(0, 0, canvas.width, canvas.height)
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i]
 
         // Use a brighter gold color with higher opacity
-        ctx.fillStyle = `rgba(212, 175, 55, ${p.opacity})`
+        ctx.fillStyle = `#c9a100`
         ctx.beginPath()
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2)
         ctx.fill()
@@ -161,7 +161,7 @@ export default function ProceduresSection() {
         <AnimatePresence mode="wait">
           {!showAllProcedures ? (
             <motion.div key="featured" initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 ">
                 {featuredProcedures.map((procedure) => (
                   <AnimatedServiceCard
                     key={procedure.title}

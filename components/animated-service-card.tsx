@@ -46,7 +46,7 @@ export default function AnimatedServiceCard({
       className="h-full"
     >
       <motion.div
-        className="group relative flex h-full flex-col overflow-hidden rounded-xl bg-white p-1 shadow-xl transition-all"
+        className="group relative flex h-full flex-col overflow-hidden rounded-xl bg-[#d8d8d8] p-1 shadow-xl transition-all"
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         whileHover={{ y: -5 }}

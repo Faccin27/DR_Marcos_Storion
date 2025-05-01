@@ -375,7 +375,7 @@ export default function AllProcedures() {
               transition={{ duration: 0.3, delay: index * 0.05 }}
               className="h-full"
             >
-              <div className="group flex h-full flex-col overflow-hidden rounded-xl bg-white p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="group flex h-full flex-col overflow-hidden rounded-xl bg-gradient-to-br from-[#d8d8d8] via-[#ebeaea] to-[#d8d8d8] hover:bg-[#d8d8d8] p-6 shadow-md transition-all hover:-translate-y-1 hover:shadow-xl">
                 <h3 className="mb-3 text-xl font-bold text-[#2c3e50]">
                   {procedure.title}
                 </h3>
