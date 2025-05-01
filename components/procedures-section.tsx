@@ -33,7 +33,7 @@ export default function ProceduresSection() {
     canvas.height = window.innerHeight
 
     // Increase number of particles from 50 to 200
-    const particleCount = 60
+    const particleCount = 20
     const particles: {
       x: number
       y: number
@@ -139,7 +139,7 @@ export default function ProceduresSection() {
   ]
 
   return (
-    <section id="servicos" className="relative w-full bg-[#2c3e50] py-16 overflow-hidden" ref={ref}>
+    <section id="servicos" className="relative w-full py-16 overflow-hidden" ref={ref}>
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-0 pointer-events-none"
