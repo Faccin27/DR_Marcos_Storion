@@ -1,6 +1,13 @@
 "use client";
 
-import { Users, Award, Calendar, Smile, CheckCircle, MapPin } from "lucide-react";
+import {
+  Users,
+  Award,
+  Calendar,
+  Smile,
+  CheckCircle,
+  MapPin,
+} from "lucide-react";
 import { motion } from "framer-motion";
 
 import AnimatedCounter from "@/components/animated-counter";
@@ -116,7 +123,7 @@ export default function Home() {
                 <h3 className="mb-2 text-xl font-semibold text-[#2c3e50]">
                   Destaque na Mídia
                 </h3>
-                <div className="flex flex-wrap gap-4">
+                <div className="grid grid-cols-3 gap-4 w-fit">
                   <div className="overflow-hidden rounded-lg shadow-md">
                     <img
                       src="/images/o_globo.jpg"
@@ -134,6 +141,27 @@ export default function Home() {
                   <div className="overflow-hidden rounded-lg shadow-md">
                     <img
                       src="/images/terra.jpg"
+                      alt="Terra"
+                      className="h-16 w-24 object-cover"
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-lg shadow-md">
+                    <img
+                      src="/images/oglobo.jpg"
+                      alt="Terra"
+                      className="h-16 w-24 object-cover"
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-lg shadow-md">
+                    <img
+                      src="/images/portal_ig.png"
+                      alt="Terra"
+                      className="h-16 w-24 object-cover"
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-lg shadow-md">
+                    <img
+                      src="/images/valor.jpg"
                       alt="Terra"
                       className="h-16 w-24 object-cover"
                     />
