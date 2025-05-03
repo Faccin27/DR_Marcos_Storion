@@ -31,11 +31,11 @@ export default function AllProcedures() {
       shortDescription:
         "Técnica avançada de rejuvenescimento facial com resultados naturais e duradouros.",
       fullDescription: `O Deep Plane FaceLift é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
-
+  
       Diferente das técnicas tradicionais, o Deep Plane FaceLift reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
-
+  
       Esta técnica é especialmente eficaz para corrigir flacidez moderada a severa no terço médio da face, linha da mandíbula e pescoço, com resultados que podem durar de 8 a 12 anos.
-
+  
       O Dr. Marcos Storion utiliza as técnicas mais modernas e seguras, garantindo resultados naturais que preservam as características individuais de cada paciente, evitando o aspecto "esticado" ou artificial.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "face",
@@ -44,29 +44,29 @@ export default function AllProcedures() {
       id: "neck-lift",
       title: "Neck Lift",
       shortDescription:
-        "Procedimento para rejuvenescer e redefinir o contorno do pescoço.",
-      fullDescription: `O Neck Lift, ou ritidoplastia cervical, é um procedimento cirúrgico destinado a melhorar os sinais visíveis de envelhecimento no pescoço e na linha da mandíbula.
-
-      Este procedimento trata especificamente o excesso de pele e gordura sob o queixo, as bandas platismais (cordas verticais no pescoço) e a flacidez da pele do pescoço, criando um contorno mais definido e jovem.
-
-      O Dr. Marcos Storion realiza esta cirurgia com técnicas minimamente invasivas quando possível, resultando em cicatrizes discretas e um período de recuperação mais rápido.
-
-      O Neck Lift pode ser realizado isoladamente ou em conjunto com outros procedimentos faciais, como o FaceLift, para um rejuvenescimento facial completo e harmonioso.`,
-      image: "/placeholder.svg?height=300&width=600",
+        "Procedimento para rejuvenescimento do pescoço, eliminando flacidez e melhorando o contorno cervical.",
+      fullDescription: `O Neck Lift é um procedimento cirúrgico especializado no rejuvenescimento do pescoço, ideal para pacientes que apresentam flacidez cutânea, bandas platismais proeminentes ou acúmulo de gordura na região submentoniana.
+  
+      Durante a cirurgia, são realizadas incisões discretas atrás das orelhas e, em alguns casos, sob o queixo, permitindo a remoção do excesso de pele e gordura, além do reposicionamento dos músculos do pescoço.
+  
+      O procedimento pode ser realizado isoladamente ou em conjunto com um facelift, dependendo das necessidades individuais do paciente e da avaliação do cirurgião.
+  
+      Os resultados incluem um contorno cervical mais definido, aparência mais jovem e harmoniosa, com recuperação média de 2 a 3 semanas para as principais atividades sociais.`,
+      image: "/images/necklift.png",
       category: "face",
     },
     {
       id: "facelift",
       title: "FaceLift",
       shortDescription:
-        "Rejuvenescimento facial completo para uma aparência mais jovem e natural.",
-      fullDescription: `O FaceLift, ou ritidoplastia, é um procedimento cirúrgico que visa rejuvenescer a face, tratando os sinais de envelhecimento como flacidez, rugas e perda de volume.
-
-      Durante o procedimento, o Dr. Marcos Storion reposiciona os tecidos faciais, remove o excesso de pele e, quando necessário, redistribui ou adiciona volume para restaurar o contorno facial jovem.
-
-      As técnicas modernas utilizadas pelo Dr. Storion garantem resultados naturais, evitando o aspecto "operado" ou excessivamente esticado, preservando a expressividade e as características individuais de cada paciente.
-
-      O FaceLift pode ser personalizado para atender às necessidades específicas de cada paciente, podendo ser combinado com outros procedimentos como blefaroplastia (cirurgia das pálpebras) ou rinoplastia para resultados ainda mais harmoniosos.`,
+        "Procedimento clássico de rejuvenescimento facial que combate sinais de envelhecimento e flacidez.",
+      fullDescription: `O FaceLift tradicional, também conhecido como ritidoplastia, é um procedimento cirúrgico que visa rejuvenescer a face através da remoção do excesso de pele e reposicionamento dos tecidos faciais.
+  
+      A técnica envolve incisões discretas ao redor das orelhas, permitindo ao cirurgião tratar a flacidez da pele e do SMAS (Sistema Músculo-Aponeurótico Superficial), resultando em uma aparência mais jovem e descansada.
+  
+      Ideal para pacientes com sinais moderados a avançados de envelhecimento facial, o FaceLift trata principalmente o terço inferior da face e pescoço, melhorando o contorno mandibular e reduzindo os sulcos nasolabiais.
+  
+      O Dr. Marcos Storion adapta a técnica às necessidades específicas de cada paciente, garantindo resultados naturais que respeitam as características individuais, com duração média de 5 a 8 anos.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "face",
     },
@@ -74,28 +74,29 @@ export default function AllProcedures() {
       id: "blefaroplastia",
       title: "Blefaroplastia",
       shortDescription:
-        "Correção estética das pálpebras para um olhar mais descansado e jovem.",
-      fullDescription: `A Blefaroplastia é uma cirurgia plástica que visa melhorar a aparência das pálpebras superiores e/ou inferiores, removendo o excesso de pele, gordura e, em alguns casos, fortalecendo os músculos.
-
-      Este procedimento é ideal para pacientes que apresentam pálpebras caídas, bolsas sob os olhos ou excesso de pele nas pálpebras, características que podem conferir um aspecto cansado ou envelhecido.
-
-      Além do benefício estético, a blefaroplastia pode melhorar o campo visual em casos onde o excesso de pele nas pálpebras superiores interfere na visão.
-
-      O Dr. Marcos Storion realiza esta cirurgia com técnicas precisas e minimamente invasivas, resultando em cicatrizes praticamente imperceptíveis e um período de recuperação relativamente rápido, com resultados que proporcionam um olhar mais descansado, jovem e expressivo.`,
+        "Cirurgia para rejuvenescimento das pálpebras, removendo excesso de pele e bolsas de gordura.",
+      fullDescription: `A Blefaroplastia é uma cirurgia plástica focada no rejuvenescimento da região dos olhos, tratando o excesso de pele nas pálpebras superiores e/ou inferiores, além das bolsas de gordura que causam aspecto de cansaço e envelhecimento.
+  
+      Nas pálpebras superiores, o procedimento remove o excesso de pele que pode até mesmo interferir na visão em casos mais severos. Nas pálpebras inferiores, são tratadas as bolsas de gordura e a flacidez cutânea.
+  
+      As incisões são realizadas em locais estratégicos que seguem as dobras naturais da pálpebra, tornando as cicatrizes praticamente imperceptíveis após a cicatrização completa.
+  
+      Os resultados incluem um olhar mais descansado, jovem e expressivo, com recuperação relativamente rápida de aproximadamente 7 a 10 dias para retorno às atividades sociais.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "face",
     },
     {
       id: "rinoplastia",
       title: "Rinoplastia",
-      shortDescription: "Cirurgia para correção estética e funcional do nariz.",
-      fullDescription: `A Rinoplastia é uma cirurgia plástica que visa melhorar a forma, tamanho e proporção do nariz, harmonizando-o com as demais características faciais. Além do aspecto estético, também pode corrigir problemas funcionais, como desvio de septo e dificuldades respiratórias.
-
-      O Dr. Marcos Storion utiliza técnicas avançadas de rinoplastia, incluindo a preservação da estrutura nasal, que mantém a integridade do nariz enquanto permite modificações precisas, resultando em um nariz natural que complementa as características faciais do paciente.
-
-      Cada rinoplastia é personalizada de acordo com a anatomia, características étnicas e desejos específicos do paciente, sempre buscando um resultado harmonioso e natural.
-
-      A recuperação geralmente leva de 1 a 2 semanas para os sinais visíveis da cirurgia desaparecerem, com resultados finais que se consolidam ao longo de 12 meses, à medida que o inchaço residual diminui completamente.`,
+      shortDescription:
+        "Cirurgia para harmonização e remodelação do nariz, melhorando estética e função respiratória.",
+      fullDescription: `A Rinoplastia é uma cirurgia plástica que visa remodelar e harmonizar o nariz, podendo ter finalidades estéticas e/ou funcionais, dependendo das necessidades de cada paciente.
+  
+      Do ponto de vista estético, a cirurgia pode corrigir diversos aspectos como: dorso nasal alto ou baixo, ponta bulbosa ou caída, narinas largas, desvios visíveis e assimetrias, sempre buscando harmonização com os demais traços faciais.
+  
+      Funcionalmente, a rinoplastia pode corrigir problemas respiratórios causados por desvio de septo, hipertrofia de cornetos ou outras alterações estruturais que dificultam a respiração adequada.
+  
+      O Dr. Marcos Storion realiza um planejamento individualizado, considerando as características anatômicas e expectativas do paciente, utilizando técnicas modernas que garantem resultados naturais e harmonização facial.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "face",
     },
@@ -103,14 +104,14 @@ export default function AllProcedures() {
       id: "otoplastia",
       title: "Otoplastia",
       shortDescription:
-        "Correção estética das orelhas para um contorno mais harmonioso.",
-      fullDescription: `A Otoplastia é uma cirurgia plástica que visa corrigir a forma, posição ou proporção das orelhas. É especialmente indicada para orelhas proeminentes ("orelhas de abano"), mas também pode corrigir deformidades congênitas ou causadas por traumas.
-
-      O procedimento envolve a remodelação da cartilagem da orelha e, quando necessário, a remoção de excesso de pele, permitindo que as orelhas fiquem mais próximas à cabeça e com formato mais harmonioso.
-
-      O Dr. Marcos Storion realiza esta cirurgia com técnicas que resultam em cicatrizes discretas, geralmente escondidas nas dobras naturais atrás da orelha.
-
-      A otoplastia pode ser realizada em crianças a partir dos 5-6 anos, quando as orelhas já atingiram seu tamanho adulto, ou em adultos de qualquer idade, proporcionando um impacto positivo significativo na autoestima e confiança.`,
+        "Correção de orelhas proeminentes ou em abano, melhorando o contorno e posicionamento auricular.",
+      fullDescription: `A Otoplastia é um procedimento cirúrgico que corrige orelhas proeminentes (popularmente conhecidas como "orelhas em abano"), aproximando-as da cabeça e melhorando seu contorno e posicionamento.
+  
+      A cirurgia envolve incisões discretas na parte posterior da orelha, permitindo a remodelação da cartilagem auricular e, quando necessário, a remoção de pequenas porções de pele para um resultado mais harmonioso.
+  
+      Este procedimento pode ser realizado em crianças a partir dos 6-7 anos de idade, quando a orelha já atingiu cerca de 85% do seu tamanho adulto, ou em qualquer fase da vida adulta.
+  
+      Os resultados são permanentes e proporcionam significativa melhora na autoestima, especialmente em crianças e adolescentes que frequentemente sofrem bullying devido à proeminência das orelhas.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "face",
     },
@@ -118,14 +119,14 @@ export default function AllProcedures() {
       id: "mentoplastia",
       title: "Mentoplastia",
       shortDescription:
-        "Cirurgia para harmonização do queixo com o restante do rosto.",
-      fullDescription: `A Mentoplastia é uma cirurgia plástica que visa melhorar o contorno e a projeção do queixo, harmonizando-o com as demais características faciais. Pode envolver o aumento do queixo com implantes ou a redução e remodelação do osso.
-
-      Este procedimento é ideal para pacientes com queixo recuado (retrognatismo), queixo muito proeminente (prognatismo) ou assimetrias, contribuindo significativamente para o equilíbrio e harmonia facial.
-
-      O Dr. Marcos Storion utiliza técnicas avançadas e implantes de alta qualidade quando necessário, garantindo resultados naturais e duradouros.
-
-      A mentoplastia pode ser realizada isoladamente ou em conjunto com outros procedimentos faciais, como rinoplastia ou lipoaspiração de papada, para um resultado facial ainda mais harmonioso.`,
+        "Cirurgia para harmonização do queixo, corrigindo desproporções através de implantes ou redução óssea.",
+      fullDescription: `A Mentoplastia é uma cirurgia de remodelação do queixo que visa corrigir desproporções faciais, podendo ser de aumento (através da colocação de implantes) ou redução (através da remodelação óssea).
+  
+      O procedimento de aumento utiliza implantes de silicone sólido ou outros biomateriais compatíveis, inseridos através de incisões discretas realizadas internamente na boca ou externamente sob o queixo.
+  
+      Nos casos de redução, é realizada a remodelação óssea para diminuir projeções excessivas do mento, harmonizando o perfil facial do paciente.
+  
+      A mentoplastia frequentemente é associada a outros procedimentos como rinoplastia ou lipoaspiração de papada para um resultado facial mais harmônico, equilibrando as proporções entre nariz, queixo e pescoço.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "face",
     },
@@ -133,14 +134,14 @@ export default function AllProcedures() {
       id: "cirurgia-angulo-mandibula",
       title: "Cirurgia de Ângulo de Mandíbula",
       shortDescription:
-        "Procedimento para definir e contornar a linha da mandíbula.",
-      fullDescription: `A Cirurgia de Ângulo de Mandíbula é um procedimento que visa melhorar o contorno e a definição da linha mandibular, criando um perfil facial mais harmônico e definido.
-
-      Este procedimento pode envolver a colocação de implantes para aumentar a projeção do ângulo mandibular, a redução óssea para diminuir um ângulo muito proeminente, ou a correção de assimetrias.
-
-      O Dr. Marcos Storion utiliza técnicas avançadas e personalizadas para cada paciente, considerando suas características faciais únicas e objetivos estéticos.
-
-      A cirurgia de ângulo de mandíbula é especialmente popular entre pacientes que desejam um perfil facial mais definido e masculino, mas também pode beneficiar mulheres que buscam melhor definição do contorno facial.`,
+        "Procedimento para definição e harmonização do contorno mandibular, criando uma aparência mais estruturada.",
+      fullDescription: `A Cirurgia de Ângulo de Mandíbula é um procedimento especializado que visa melhorar a definição e o contorno da linha mandibular, criando um ângulo mais marcado e estruturado na transição entre o rosto e o pescoço.
+  
+      Existem duas abordagens principais: o aumento do ângulo mandibular através de implantes personalizados, ou a remodelação óssea para pacientes com hipertrofia massetérica ou ângulos muito proeminentes que desejam um refinamento.
+  
+      A técnica utiliza incisões internas na boca, não deixando cicatrizes visíveis, e pode ser associada a outros procedimentos como mentoplastia ou lipoaspiração de papada para um resultado facial ainda mais harmonioso.
+  
+      Este procedimento é muito procurado por pacientes que desejam uma aparência facial mais definida e angular, especialmente homens que buscam uma expressão mais masculina através do contorno mandibular bem delineado.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "face",
     },
@@ -148,14 +149,14 @@ export default function AllProcedures() {
       id: "lipoaspiracao",
       title: "Lipoaspiração",
       shortDescription:
-        "Remoção de gordura localizada para contorno corporal mais definido.",
-      fullDescription: `A Lipoaspiração é um procedimento cirúrgico que remove depósitos de gordura localizada resistentes à dieta e exercícios, melhorando o contorno corporal.
-
-      O Dr. Marcos Storion utiliza técnicas avançadas de lipoaspiração, incluindo a lipoaspiração HD (alta definição), que não apenas remove o excesso de gordura, mas também esculpe o corpo, criando definição muscular e contornos mais atléticos.
-
-      As áreas mais comumente tratadas incluem abdômen, flancos, costas, braços, coxas, joelhos e papada, mas a técnica pode ser aplicada em praticamente qualquer área do corpo com acúmulo de gordura.
-
-      É importante ressaltar que a lipoaspiração não é um tratamento para obesidade, mas sim um procedimento de contorno corporal para pacientes próximos do peso ideal que desejam melhorar áreas específicas.`,
+        "Técnica cirúrgica para remoção de gordura localizada e remodelação corporal.",
+      fullDescription: `A Lipoaspiração é um procedimento cirúrgico de contorno corporal que remove depósitos de gordura resistentes à dieta e exercícios, melhorando as proporções e silhueta do corpo.
+  
+      A técnica moderna utiliza cânulas de pequeno calibre inseridas através de incisões mínimas, que permitem a sucção controlada da gordura subcutânea de diversas áreas como abdome, flancos, costas, braços, coxas e papada.
+  
+      O Dr. Marcos Storion emprega técnicas avançadas como a lipoaspiração VASER (ultrassônica) ou lipoaspiração laser, que promovem a emulsificação da gordura antes da aspiração, reduzindo o trauma aos tecidos adjacentes e facilitando a recuperação.
+  
+      É importante ressaltar que a lipoaspiração não é um tratamento para obesidade, mas sim para remodelação corporal em pacientes próximos do peso ideal que apresentam acúmulos localizados de gordura.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "body",
     },
@@ -163,43 +164,44 @@ export default function AllProcedures() {
       id: "mamoplastia-aumento",
       title: "Mamoplastia de Aumento",
       shortDescription:
-        "Aumento mamário com implantes de silicone de alta qualidade.",
-      fullDescription: `A Mamoplastia de Aumento é uma cirurgia plástica que visa aumentar o volume e melhorar a forma dos seios através da colocação de implantes mamários.
-
-      O Dr. Marcos Storion utiliza implantes de silicone de última geração, com alta tecnologia e segurança, disponíveis em diferentes formatos, tamanhos e perfis para atender às necessidades e desejos específicos de cada paciente.
-
-      A cirurgia pode ser realizada através de diferentes incisões (periareolar, inframamária ou axilar) e os implantes podem ser posicionados em plano subglandular (sobre o músculo) ou submuscular (sob o músculo), dependendo da anatomia e objetivos da paciente.
-
-      Além de aumentar o volume dos seios, este procedimento pode melhorar a proporção corporal, corrigir assimetrias leves e restaurar o volume perdido após gravidez, amamentação ou perda de peso significativa.`,
+        "Cirurgia para aumento do volume mamário através da colocação de implantes de silicone.",
+      fullDescription: `A Mamoplastia de Aumento é uma cirurgia plástica que visa aumentar o volume e melhorar a forma dos seios através da colocação de implantes mamários de silicone.
+  
+      O procedimento é personalizado de acordo com as características anatômicas e desejos de cada paciente, considerando aspectos como: tipo de implante (redondo ou anatômico), volume adequado às proporções corporais, posicionamento (subglandular, submuscular ou plano dual), e via de acesso (periareolar, inframamária ou axilar).
+  
+      Os implantes modernos possuem alta tecnologia e segurança, com envoltório de silicone coesivo (gel de silicone) que mantém sua integridade mesmo em caso de ruptura do envoltório.
+  
+      Os resultados proporcionam maior volume mamário, melhora na projeção e simetria dos seios, com consequente aumento da autoestima e satisfação com a imagem corporal.`,
       image: "/placeholder.svg?height=300&width=600",
-      category: "breast",
+      category: "body",
     },
     {
       id: "mastopexia",
       title: "Mastopexia",
-      shortDescription: "Cirurgia para elevação e remodelação das mamas.",
-      fullDescription: `A Mastopexia, ou lifting de mama, é uma cirurgia plástica que visa elevar e remodelar seios caídos (ptose mamária), criando um contorno mais jovem e firme.
-
-      Durante o procedimento, o Dr. Marcos Storion remove o excesso de pele, reposiciona o tecido mamário e, quando necessário, reposiciona o complexo aréolo-papilar para uma posição mais elevada e natural.
-
-      A mastopexia pode ser realizada isoladamente ou em conjunto com implantes mamários (mastopexia com prótese) quando, além da elevação, deseja-se aumentar o volume dos seios.
-
-      Este procedimento é especialmente indicado para mulheres que apresentam flacidez mamária após gravidez, amamentação, grandes perdas de peso ou como resultado do processo natural de envelhecimento.`,
+      shortDescription:
+        "Cirurgia para elevação e remodelação das mamas que apresentam ptose (queda).",
+      fullDescription: `A Mastopexia é um procedimento cirúrgico que visa elevar e remodelar as mamas que apresentam ptose (queda), devolvendo-lhes uma aparência mais jovem e projetada.
+  
+      As causas mais comuns da ptose mamária incluem gravidez e amamentação, grandes variações de peso, envelhecimento natural e predisposição genética, fazendo com que o tecido mamário perca firmeza e a aréola se posicione abaixo do sulco inframamário.
+  
+      A técnica cirúrgica varia conforme o grau de ptose e pode incluir diferentes tipos de incisões (periareolar, vertical ou em "T" invertido), sempre buscando cicatrizes mínimas e bem posicionadas.
+  
+      A mastopexia pode ser realizada isoladamente ou associada à colocação de implantes (mastopexia com prótese) quando, além da elevação, a paciente deseja aumento do volume mamário.`,
       image: "/placeholder.svg?height=300&width=600",
-      category: "breast",
+      category: "body",
     },
     {
       id: "lipoabdominoplastia",
       title: "Lipoabdominoplastia",
       shortDescription:
-        "Combinação de lipoaspiração e abdominoplastia para resultados superiores.",
-      fullDescription: `A Lipoabdominoplastia é uma técnica cirúrgica avançada que combina os benefícios da lipoaspiração com os da abdominoplastia tradicional, proporcionando resultados superiores no contorno abdominal.
-
-      Diferente da abdominoplastia convencional, esta técnica preserva melhor a vascularização da região, permitindo uma lipoaspiração mais ampla e segura do abdômen e áreas adjacentes, como flancos e costas.
-
-      O Dr. Marcos Storion realiza a correção da diástase dos músculos retos abdominais (separação dos músculos abdominais que pode ocorrer após gravidez ou ganho de peso significativo), remove o excesso de pele e gordura, e remodela o contorno abdominal.
-
-      Esta técnica resulta em um abdômen mais definido, com cicatrizes menores e melhor posicionadas, além de proporcionar uma recuperação geralmente mais rápida e confortável em comparação com a abdominoplastia tradicional.`,
+        "Procedimento combinado que associa lipoaspiração e abdominoplastia para remodelação completa do abdome.",
+      fullDescription: `A Lipoabdominoplastia é um procedimento avançado que combina as técnicas de lipoaspiração e abdominoplastia tradicional, proporcionando uma remodelação completa do abdome com resultados superiores e recuperação otimizada.
+  
+      Diferente da abdominoplastia convencional, esta técnica inicia com a lipoaspiração do abdome e flancos, o que preserva melhor a vascularização dos tecidos e permite uma remoção mais efetiva da gordura localizada antes da ressecção do excesso de pele.
+  
+      O procedimento também inclui a plicatura dos músculos retos abdominais (correção da diástase), reposicionamento do umbigo e remoção do excesso de pele abdominal, resultando em um abdome mais plano e contornado.
+  
+      Indicada principalmente para pacientes pós-gestação ou após grande perda de peso que apresentam flacidez abdominal, gordura localizada e enfraquecimento da parede muscular do abdome.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "body",
     },
@@ -207,29 +209,29 @@ export default function AllProcedures() {
       id: "ninfoplastia",
       title: "Ninfoplastia",
       shortDescription:
-        "Cirurgia íntima feminina para redução ou remodelação dos pequenos lábios.",
-      fullDescription: `A Ninfoplastia, também conhecida como labioplastia, é uma cirurgia íntima feminina que visa reduzir ou remodelar os pequenos lábios (lábios menores) da vulva.
-
-      Este procedimento é indicado para mulheres que apresentam hipertrofia (aumento) dos pequenos lábios, seja por razões congênitas, hormonais ou resultantes de partos, causando desconforto físico, dificuldades de higiene ou constrangimento estético.
-
-      O Dr. Marcos Storion realiza esta cirurgia com técnicas precisas e minimamente invasivas, preservando a sensibilidade e funcionalidade da região, com resultados naturais e cicatrizes praticamente imperceptíveis.
-
-      A recuperação é relativamente rápida, com retorno às atividades normais em aproximadamente 7-10 dias, e às relações sexuais após 30-40 dias, conforme orientação médica individualizada.`,
+        "Cirurgia íntima feminina para redução ou remodelação dos pequenos lábios vaginais.",
+      fullDescription: `A Ninfoplastia, também conhecida como labioplastia, é uma cirurgia íntima feminina que visa reduzir ou remodelar os pequenos lábios vaginais (ninfas) quando estes são desproporcionalmente grandes ou assimétricos.
+  
+      O procedimento é indicado para mulheres que apresentam desconforto físico durante atividades cotidianas ou íntimas, irritação e problemas de higiene devido ao excesso de tecido labial, além daquelas que buscam melhoria estética da região.
+  
+      A técnica cirúrgica envolve a remoção precisa do tecido excedente dos pequenos lábios, preservando sua sensibilidade e funcionalidade, com suturas absorvíveis que minimizam o desconforto no pós-operatório.
+  
+      A recuperação é relativamente rápida, com retorno às atividades normais em aproximadamente 7 dias e às relações sexuais após 30-40 dias, proporcionando maior conforto físico e melhora significativa na autoestima.`,
       image: "/placeholder.svg?height=300&width=600",
-      category: "other",
+      category: "body",
     },
     {
       id: "gluteoplastia",
       title: "Gluteoplastia",
       shortDescription:
-        "Aumento e modelagem dos glúteos para contorno mais definido.",
-      fullDescription: `A Gluteoplastia é uma cirurgia plástica que visa aumentar o volume e melhorar o formato dos glúteos, proporcionando um contorno mais definido e harmonioso.
-
-      O Dr. Marcos Storion realiza diferentes técnicas de gluteoplastia, incluindo o uso de implantes de silicone especiais para glúteos e a lipoenxertia (transferência de gordura), onde gordura do próprio paciente é removida de áreas com excesso, purificada e reinjetada nos glúteos.
-
-      A escolha da técnica mais adequada depende da anatomia do paciente, quantidade de gordura disponível para transferência e do resultado desejado.
-
-      Este procedimento é ideal para pacientes que desejam glúteos mais volumosos, projetados ou que apresentam assimetrias, proporcionando resultados naturais e duradouros quando realizado por um cirurgião experiente como o Dr. Storion.`,
+        "Cirurgia para aumento e remodelação dos glúteos através de implantes ou lipoenxertia.",
+      fullDescription: `A Gluteoplastia é um procedimento cirúrgico que visa aumentar o volume e melhorar o contorno dos glúteos, podendo ser realizada através de duas técnicas principais: implantes de silicone ou lipoenxertia (transferência de gordura).
+  
+      Na técnica com implantes, próteses especiais de silicone coesivo são inseridas através de uma incisão discreta no sulco interglúteo, posicionadas em plano submuscular ou intramuscular para resultado natural.
+  
+      A gluteoplastia por lipoenxertia (Brazilian Butt Lift) utiliza gordura do próprio paciente, obtida por lipoaspiração de áreas com excesso e transferida para os glúteos após processamento adequado, proporcionando resultado mais natural.
+  
+      O Dr. Marcos Storion avalia individualmente cada caso para indicar a técnica mais adequada, considerando a quantidade de gordura disponível, as proporções corporais e as expectativas do paciente.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "body",
     },
@@ -237,29 +239,29 @@ export default function AllProcedures() {
       id: "correcao-ginecomastia",
       title: "Correção de Ginecomastia",
       shortDescription:
-        "Tratamento cirúrgico para redução das mamas masculinas.",
-      fullDescription: `A Correção de Ginecomastia é uma cirurgia plástica que visa tratar o aumento anormal das mamas em homens, uma condição que pode causar desconforto físico e psicológico significativo.
-
-      O procedimento pode envolver lipoaspiração para remover o excesso de gordura, excisão direta de tecido glandular, ou uma combinação de ambas as técnicas, dependendo da causa e gravidade da ginecomastia.
-
-      O Dr. Marcos Storion utiliza técnicas minimamente invasivas sempre que possível, resultando em cicatrizes discretas e um período de recuperação mais rápido e confortável.
-
-      Esta cirurgia proporciona um contorno torácico mais masculino e definido, com resultados permanentes na maioria dos casos, desde que mantido o peso estável e evitado o uso de substâncias que possam estimular o crescimento mamário.`,
+        "Tratamento cirúrgico para redução das mamas masculinas aumentadas, devolvendo contorno torácico masculino.",
+      fullDescription: `A Correção de Ginecomastia é um procedimento cirúrgico que trata o aumento anormal das mamas em homens, uma condição que pode causar significativo impacto psicológico e social.
+  
+      A técnica varia de acordo com o tipo de ginecomastia: em casos predominantemente gordurosos, pode-se utilizar apenas lipoaspiração; quando há excesso de tecido glandular, realiza-se também a ressecção direta deste tecido através de incisões discretas ao redor da aréola.
+  
+      Em casos severos com grande excesso de pele, pode ser necessária a remoção de pele redundante, resultando em cicatrizes mais evidentes, porém cuidadosamente planejadas para máxima discrição.
+  
+      Os resultados incluem um tórax com contorno mais masculino e definido, cicatrizes mínimas e praticamente imperceptíveis na maioria dos casos, com significativa melhora da autoestima e qualidade de vida.`,
       image: "/placeholder.svg?height=300&width=600",
-      category: "breast",
+      category: "body",
     },
     {
       id: "implantes-panturrilha",
       title: "Implantes de Panturrilha",
       shortDescription:
-        "Aumento e definição das panturrilhas com implantes de silicone.",
-      fullDescription: `O Implante de Panturrilha é uma cirurgia plástica que visa aumentar o volume e melhorar o contorno das panturrilhas através da colocação de implantes de silicone especialmente desenvolvidos para esta região.
-
-      Este procedimento é ideal para pacientes que desejam panturrilhas mais volumosas e definidas, seja por razões estéticas ou para corrigir assimetrias ou hipotrofias (desenvolvimento insuficiente) resultantes de condições congênitas ou adquiridas.
-
-      O Dr. Marcos Storion utiliza técnicas avançadas para posicionar os implantes em um plano subfascial ou submuscular, garantindo resultados naturais e minimizando riscos de complicações.
-
-      Os implantes de panturrilha são feitos de silicone sólido, especificamente desenhados para simular a anatomia muscular natural, proporcionando resultados duradouros e resistentes.`,
+        "Procedimento para aumento e definição das panturrilhas através de implantes personalizados.",
+      fullDescription: `Os Implantes de Panturrilha são uma solução cirúrgica para pacientes que desejam aumentar o volume e melhorar a definição das panturrilhas, seja por razões estéticas ou para corrigir assimetrias e deformidades.
+  
+      O procedimento utiliza implantes de silicone coesivo, especialmente desenhados para a região da panturrilha, que são inseridos através de incisões discretas no sulco posterior do joelho, posicionados em plano subfascial ou submuscular.
+  
+      Os implantes são selecionados de acordo com as características anatômicas do paciente e podem ser colocados para aumentar principalmente a parte medial da panturrilha (mais comum) ou ambos os lados, dependendo do objetivo estético.
+  
+      A cirurgia proporciona resultados permanentes com contorno natural, sendo especialmente procurada por pessoas com panturrilhas pouco desenvolvidas mesmo após treinamento físico intensivo, devido a fatores genéticos.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "body",
     },
@@ -267,14 +269,14 @@ export default function AllProcedures() {
       id: "lifting-bracos",
       title: "Lifting de Braços",
       shortDescription:
-        "Cirurgia para remover excesso de pele e gordura dos braços.",
-      fullDescription: `O Lifting de Braços, ou braquioplastia, é uma cirurgia plástica que visa remover o excesso de pele e gordura dos braços, resultando em contornos mais definidos e firmes.
-
-      Este procedimento é especialmente indicado para pacientes que apresentam flacidez significativa nos braços devido a grandes perdas de peso, envelhecimento natural ou fatores genéticos.
-
-      O Dr. Marcos Storion pode combinar a remoção do excesso de pele com lipoaspiração para otimizar os resultados, criando braços mais tonificados e proporcionais ao resto do corpo.
-
-      As cicatrizes resultantes são estrategicamente posicionadas na face interna dos braços, tornando-as discretas e facilmente ocultáveis na posição natural dos braços.`,
+        "Cirurgia para remoção de excesso de pele e gordura na região dos braços, melhorando o contorno e firmeza.",
+      fullDescription: `O Lifting de Braços, também conhecido como braquioplastia, é um procedimento cirúrgico que remove o excesso de pele e gordura na face interna dos braços, área comumente afetada pelo envelhecimento, grandes perdas de peso ou predisposição genética.
+  
+      A técnica envolve uma incisão longitudinal na face interna do braço, desde a axila até próximo ao cotovelo em casos mais severos, permitindo a remoção do excesso cutâneo e gorduroso, além da reestruturação dos tecidos para um contorno mais firme.
+  
+      O cirurgião posiciona estrategicamente a cicatriz na face interna do braço, onde fica menos visível, utilizando técnicas de sutura que minimizam sua aparência final.
+  
+      O resultado é um braço com contorno mais definido e firme, proporcionando maior conforto físico e liberdade para usar roupas sem mangas, com recuperação que permite retorno às atividades normais em aproximadamente 2 a 3 semanas.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "body",
     },
@@ -282,17 +284,17 @@ export default function AllProcedures() {
       id: "lifting-coxas",
       title: "Lifting de Coxas",
       shortDescription:
-        "Cirurgia para remover excesso de pele e gordura das coxas.",
-      fullDescription: `O Lifting de Coxas, ou cruroplastia, é uma cirurgia plástica que visa remover o excesso de pele e gordura das coxas, melhorando seu contorno e firmeza.
-
-      Este procedimento é especialmente indicado para pacientes que apresentam flacidez significativa nas coxas devido a grandes perdas de peso, envelhecimento natural ou fatores genéticos.
-
-      O Dr. Marcos Storion pode realizar diferentes tipos de lifting de coxas, incluindo o lifting medial (face interna das coxas), lifting lateral (face externa) ou lifting circunferencial, dependendo das necessidades específicas do paciente.
-
-      A cirurgia pode ser combinada com lipoaspiração para otimizar os resultados, criando coxas mais tonificadas e com contornos mais harmoniosos.`,
+        "Procedimento para remoção de excesso de pele e gordura nas coxas, melhorando contorno e firmeza.",
+      fullDescription: `O Lifting de Coxas, ou cruroplastia, é um procedimento cirúrgico que visa remover o excesso de pele e gordura nas coxas, melhorando seu contorno e firmeza, especialmente indicado após grandes perdas de peso ou devido ao processo natural de envelhecimento.
+  
+      Existem diferentes técnicas dependendo da área a ser tratada: o lifting medial trata a parte interna das coxas com incisão no sulco inguinal e eventualmente vertical; o lifting lateral foca na face externa com incisões que podem se estender da região inguinal até o glúteo.
+  
+      O procedimento não apenas remove o excesso de pele, mas também reposiciona os tecidos remanescentes, criando um contorno mais harmonioso e firme nas coxas.
+  
+      A recuperação exige cuidados especiais como uso de cinta compressiva por 4 a 6 semanas e restrição de atividades físicas intensas por pelo menos 1 mês, com resultados que proporcionam maior conforto ao caminhar e liberdade para usar roupas mais curtas.`,
       image: "/placeholder.svg?height=300&width=600",
       category: "body",
-    },
+    }
   ];
 
   const openModal = (procedure: Procedure) => {
@@ -341,26 +343,6 @@ export default function AllProcedures() {
           }`}
         >
           Corpo
-        </button>
-        <button
-          onClick={() => setActiveTab("breast")}
-          className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "breast"
-              ? "bg-[#d4af37] text-white"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
-        >
-          Mama
-        </button>
-        <button
-          onClick={() => setActiveTab("other")}
-          className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "other"
-              ? "bg-[#d4af37] text-white"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
-        >
-          Outros
         </button>
       </div>
 
