@@ -7,6 +7,16 @@ import { AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedServiceCard from "./animated-service-card";
 import AllProcedures from "./all-procedures";
+import ProcedureModal from "./procedure-modal";
+
+interface Procedure {
+  title: string;
+  description: string;
+  fullDescription?: string;
+  icon: string;
+  index: number;
+  image?: string;
+}
 
 export default function ProceduresSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,6 +30,22 @@ export default function ProceduresSection() {
 
   // Particles
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [showAllProcedures, setShowAllProcedures] = useState(false);
+
+  // Modal state
+  const [selectedProcedure, setSelectedProcedure] = useState<Procedure | null>(
+    null
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (procedure: Procedure) => {
+    setSelectedProcedure(procedure);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -28,9 +54,25 @@ export default function ProceduresSection() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Set canvas to full window size
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // Função para ajustar o tamanho do canvas com o pixel ratio correto
+    const resizeCanvas = () => {
+      const pixelRatio = window.devicePixelRatio || 1;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+
+      // Definir o tamanho do elemento canvas
+      canvas.style.width = `${width}px`;
+      canvas.style.height = `${height}px`;
+
+      // Definir o tamanho do buffer do canvas (multiplicado pelo pixel ratio)
+      canvas.width = Math.floor(width * pixelRatio);
+      canvas.height = Math.floor(height * pixelRatio);
+
+      // Escalar o contexto de acordo com o pixel ratio
+      ctx.scale(pixelRatio, pixelRatio);
+    };
+
+    resizeCanvas();
 
     // Increase number of particles from 50 to 200
     const particleCount = 20;
@@ -47,10 +89,10 @@ export default function ProceduresSection() {
       particles.length = 0; // Clear existing particles
       for (let i = 0; i < particleCount; i++) {
         particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          // Increase size range from (1-4) to (2-6)
-          size: Math.random() * 4 + 2,
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          // Reduzir o tamanho das partículas (antes era Math.random() * 4 + 2)
+          size: Math.random() * 2.5 + 1,
           // Slightly increase speed for more movement
           speedX: Math.random() * 0.8 - 0.4,
           speedY: Math.random() * 0.8 - 0.4,
@@ -63,7 +105,7 @@ export default function ProceduresSection() {
     const animateParticles = () => {
       // Use a semi-transparent clear to create trails
       ctx.fillStyle = "#FFF";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, window.innerWidth, window.innerHeight);
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
@@ -71,6 +113,7 @@ export default function ProceduresSection() {
         // Use a brighter gold color with higher opacity
         ctx.fillStyle = `#c9a100`;
         ctx.beginPath();
+        // Usar arc com o mesmo valor para largura e altura para garantir círculos perfeitos
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fill();
 
@@ -83,18 +126,17 @@ export default function ProceduresSection() {
         p.y += p.speedY;
 
         // Wrap particles around the screen
-        if (p.x > canvas.width) p.x = 0;
-        if (p.x < 0) p.x = canvas.width;
-        if (p.y > canvas.height) p.y = 0;
-        if (p.y < 0) p.y = canvas.height;
+        if (p.x > window.innerWidth) p.x = 0;
+        if (p.x < 0) p.x = window.innerWidth;
+        if (p.y > window.innerHeight) p.y = 0;
+        if (p.y < 0) p.y = window.innerHeight;
       }
 
       requestAnimationFrame(animateParticles);
     };
 
     const handleResize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      resizeCanvas();
       createParticles();
     };
 
@@ -109,35 +151,61 @@ export default function ProceduresSection() {
     };
   }, []);
 
-  const [showAllProcedures, setShowAllProcedures] = useState(false);
+  // Efeito adicional para garantir que o canvas seja redimensionado quando showAllProcedures mudar
+  useEffect(() => {
+    // Pequeno timeout para permitir que o DOM seja atualizado primeiro
+    const timer = setTimeout(() => {
+      if (canvasRef.current) {
+        // Disparar um evento de redimensionamento para recalcular o canvas
+        window.dispatchEvent(new Event("resize"));
+      }
+    }, 100);
 
-  const featuredProcedures = [
+    return () => clearTimeout(timer);
+  }, [showAllProcedures]);
+
+  const featuredProcedures: Procedure[] = [
     {
-      title: "Lipo HD",
+      title: "Deep Plane FaceLift",
       description:
         "Lipoaspiração de alta definição para resultados mais precisos e naturais.",
+      fullDescription: `O Deep Plane FaceLift é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
+  
+      Diferente das técnicas tradicionais, o Deep Plane FaceLift reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
+  
+      Esta técnica é especialmente eficaz para corrigir flacidez moderada a severa no terço médio da face, linha da mandíbula e pescoço, com resultados que podem durar de 8 a 12 anos.
+  
+      O Dr. Marcos Storion utiliza as técnicas mais modernas e seguras, garantindo resultados naturais que preservam as características individuais de cada paciente, evitando o aspecto "esticado" ou artificial.`,
       icon: "Droplets",
       index: 0,
+      image: "/placeholder.svg?height=300&width=600",
     },
     {
-      title: "Rinoplastia",
-      description: "Cirurgia para correção estética e funcional do nariz.",
+      title: "Neck Lift",
+      description:
+        "Procedimento para rejuvenescimento do pescoço, eliminando flacidez e melhorando o contorno cervical.",
+      fullDescription: `O Neck Lift é um procedimento cirúrgico especializado no rejuvenescimento do pescoço, ideal para pacientes que apresentam flacidez cutânea, bandas platismais proeminentes ou acúmulo de gordura na região submentoniana. Durante a cirurgia, são realizadas incisões discretas atrás das orelhas e, em alguns casos, sob o queixo, permitindo a remoção do excesso de pele e gordura, além do reposicionamento dos músculos do pescoço. O procedimento pode ser realizado isoladamente ou em conjunto com um facelift, dependendo das necessidades individuais do paciente e da avaliação do cirurgião. Os resultados incluem um contorno cervical mais definido, aparência mais jovem e harmoniosa, com recuperação média de 2 a 3 semanas para as principais atividades sociais.`,
       icon: "Scissors",
       index: 1,
+      image: "/placeholder.svg?height=300&width=600",
     },
     {
-      title: "Prótese de Mama",
+      title: "FaceLift",
       description:
-        "Aumento mamário com implantes de silicone de alta qualidade.",
+        "Procedimento clássico de rejuvenescimento facial que combate sinais de envelhecimento e flacidez.",
+      fullDescription: `O FaceLift tradicional, também conhecido como ritidoplastia, é um procedimento cirúrgico que visa rejuvenescer a face através da remoção do excesso de pele e reposicionamento dos tecidos faciais. A técnica envolve incisões discretas ao redor das orelhas, permitindo ao cirurgião tratar a flacidez da pele e do SMAS (Sistema Músculo-Aponeurótico Superficial), resultando em uma aparência mais jovem e descansada. Ideal para pacientes com sinais moderados a avançados de envelhecimento facial, o FaceLift trata principalmente o terço inferior da face e pescoço, melhorando o contorno mandibular e reduzindo os sulcos nasolabiais. O Dr. Marcos Storion adapta a técnica às necessidades específicas de cada paciente, garantindo resultados naturais que respeitam as características individuais, com duração média de 5 a 8 anos.`,
       icon: "Heart",
       index: 2,
+      image: "/placeholder.svg?height=300&width=600",
     },
     {
-      title: "Harmonização Facial",
+      title: "Blefaroplastia",
       description:
-        "Procedimentos combinados para equilibrar as proporções faciais.",
+        "Cirurgia para rejuvenescimento das pálpebras, removendo excesso de pele e bolsas de gordura.",
+      fullDescription: `A Blefaroplastia é uma cirurgia plástica focada no rejuvenescimento da região dos olhos, tratando o excesso de pele nas pálpebras superiores e/ou inferiores, além das bolsas de gordura que causam aspecto de cansaço e envelhecimento. Nas pálpebras superiores, o procedimento remove o excesso de pele que pode até mesmo interferir na visão em casos mais severos. Nas pálpebras inferiores, são tratadas as bolsas de gordura e a flacidez cutânea. As incisões são realizadas em locais estratégicos que seguem as dobras naturais da pálpebra, tornando as cicatrizes praticamente imperceptíveis após a cicatrização completa. Os resultados incluem um olhar mais descansado, jovem e expressivo, com recuperação relativamente rápida de aproximadamente 7 a 10 dias para retorno às atividades sociais.`,
       icon: "Sparkles",
       index: 3,
+      image: "/placeholder.svg?height=300&width=600",
     },
   ];
 
@@ -185,6 +253,7 @@ export default function ProceduresSection() {
                     description={procedure.description}
                     icon={procedure.icon}
                     index={procedure.index}
+                    onClick={() => openModal(procedure)}
                   />
                 ))}
               </div>
@@ -218,6 +287,18 @@ export default function ProceduresSection() {
           )}
         </AnimatePresence>
       </div>
+
+      {selectedProcedure && (
+        <ProcedureModal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          title={selectedProcedure.title}
+          description={
+            selectedProcedure.fullDescription || selectedProcedure.description
+          }
+          image={selectedProcedure.image}
+        />
+      )}
     </section>
   );
 }
