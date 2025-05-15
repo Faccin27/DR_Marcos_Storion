@@ -140,7 +140,7 @@ export default function AnimatedTestimonials() {
 
             <div className="relative mb-6">
               <Quote className="absolute -left-10 -top-6 h-8 w-8 text-[#d4af37] opacity-30" />
-              <p className="text-center text-xl font-light italic leading-relaxed text-gray-700 md:text-2xl">
+              <p className="text-center text-xl font-light italic leading-relaxed text-gray-700 md:text-2xl w-11/12 mx-auto">
                 {testimonial.text}
               </p>
               <Quote className="absolute -bottom-6 -right-10 h-8 w-8 rotate-180 text-[#d4af37] opacity-30" />
@@ -158,7 +158,7 @@ export default function AnimatedTestimonials() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 justify-between px-4">
+        <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 justify-between px-1">
           <button
             onClick={() => {
               prevTestimonial()
