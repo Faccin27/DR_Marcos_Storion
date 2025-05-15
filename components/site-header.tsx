@@ -13,8 +13,8 @@ const navigation = [
   { name: "Início", href: "/" },
   { name: "Serviços", href: "/#servicos" },
   { name: "Sobre", href: "/#sobre" },
-  { name: "Antes e Depois", href: "/#antes-depois" },
   { name: "Depoimentos", href: "/#depoimentos" },
+  { name: "Antes e Depois", href: "/#antes-depois" },
   { name: "FAQ", href: "/#faq" },
   { name: "Contato", href: "/#contato" },
 ];
@@ -151,7 +151,12 @@ export default function SiteHeader() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Button
             className="bg-[#d4af37] hover:bg-[#b8971f] text-white"
-            onClick={() => window.open("https://wa.me/5511999999999", "_blank")}
+            onClick={() =>
+              window.open(
+                "https://api.whatsapp.com/send?phone=5511934167007&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20o%20Dr.%20Marcos%20!",
+                "_blank"
+              )
+            }
           >
             <Phone className="mr-2 h-4 w-4" />
             Agende sua consulta
@@ -231,12 +236,14 @@ export default function SiteHeader() {
                     <Button
                       className="w-full bg-[#d4af37] hover:bg-[#b8971f] text-white"
                       onClick={() => {
-                        window.open("https://wa.me/5511999999999", "_blank");
+                        window.open("https://wa.me/5511934167007", "_blank");
                         setMobileMenuOpen(false);
                       }}
                     >
                       <Phone className="mr-2 h-4 w-4" />
-                      Agende sua consulta
+                      <Link href="https://api.whatsapp.com/send?phone=5511934167007&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20o%20Dr.%20Marcos%20!">
+                        Agende sua consulta
+                      </Link>
                     </Button>
                   </div>
                 </div>

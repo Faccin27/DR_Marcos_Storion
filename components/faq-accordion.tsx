@@ -27,7 +27,7 @@ export default function FAQAccordion() {
     {
       question: "Como agendar uma consulta?",
       answer:
-        "Você pode agendar uma consulta através do formulário de contato em nosso site, pelo telefone (11) 99999-9999 ou pelo WhatsApp. Nossa equipe entrará em contato para confirmar a data e horário disponíveis que melhor se adequem à sua agenda.",
+        "Você pode agendar uma consulta através do formulário de contato em nosso site, pelo telefone (11) 9 3416 7007 ou pelo WhatsApp. Nossa equipe entrará em contato para confirmar a data e horário disponíveis que melhor se adequem à sua agenda.",
     },
   ]
 
