@@ -24,7 +24,7 @@ export default function ParallaxQuoteSection({
   const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.6, 1, 0.6]);
 
   const backgrounds = [
-    "linear-gradient(to right, rgba(44, 62, 80, 0.8), rgba(26, 37, 47, 0.2)), url('/images/service.jpg')",
+    "linear-gradient(to right, rgba(44, 62, 80, 0.8), rgba(26, 37, 47, 0.2)), url('/images/parallaxbk.jpg')",
   ];
 
   return (

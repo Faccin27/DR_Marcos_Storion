@@ -12,7 +12,7 @@ export default function MultiLocationMap() {
   const locations: Location[] = [
     {
       id: "paulista",
-      name: "São Paulo",
+      name: "São Paulo - SP",
       address:
         "São Paulo - SP Av. Brigadeiro Faria Lima, 1656 - 5A - Jardim Paulistano",
       mapUrl:
@@ -20,7 +20,7 @@ export default function MultiLocationMap() {
     },
     {
       id: "jardins",
-      name: "Bariri",
+      name: "Bariri - SP",
       address: "Clínica Visa Vida - R. Tiradentes, 21 - Vila Santa Terezinha",
       mapUrl:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1009.6174257965748!2d-48.74138432522925!3d-22.070972855221235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf4b37a0318bc3%3A0x10f47752e005c827!2sCl%C3%ADnica%20Visa%20Vida!5e1!3m2!1sen!2sbr!4v1747347291623!5m2!1sen!2sbr",
