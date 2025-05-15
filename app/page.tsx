@@ -123,7 +123,7 @@ export default function Home() {
                 <h3 className="mb-2 text-xl font-semibold text-[#2c3e50]">
                   Destaque na Mídia
                 </h3>
-                <div className="grid grid-cols-3 gap-4 w-fit">
+                <div className="grid grid-cols-3 gap-4 w-fit mx-auto md:mx-0">
                   <div className="overflow-hidden rounded-lg shadow-md">
                     <img
                       src="/images/o_globo.jpg"
