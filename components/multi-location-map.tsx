@@ -12,24 +12,25 @@ export default function MultiLocationMap() {
   const locations: Location[] = [
     {
       id: "paulista",
-      name: "Unidade Paulista",
-      address: "Av. Paulista, 1000 - Bela Vista, São Paulo - SP",
+      name: "São Paulo",
+      address:
+        "São Paulo - SP Av. Brigadeiro Faria Lima, 1656 - 5A - Jardim Paulistano",
       mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0976517748085!2d-46.65499492392006!3d-23.564616178899723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1713984000000!5m2!1spt-BR!2sbr",
+        "https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d279!2d-46.692866!3d-23.5719966!2m2!1f76.96!2f44.95!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x94ce574fd54d1b8d%3A0x7b32acd40066b52c!2sAv.%20Brig.%20Faria%20Lima%2C%201656%20-%20Pinheiros%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001451-001!5e1!3m2!1sen!2sbr!4v1747347208784!5m2!1sen!2sbr",
     },
     {
       id: "jardins",
-      name: "Unidade Jardins",
-      address: "Rua Oscar Freire, 500 - Jardins, São Paulo - SP",
+      name: "Bariri",
+      address: "Clínica Visa Vida - R. Tiradentes, 21 - Vila Santa Terezinha",
       mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2635995502106!2d-46.67260492392025!3d-23.55871367891097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59d2a5270055%3A0x7f01e58f2f696a8d!2sR.%20Oscar%20Freire%2C%20500%20-%20Jardim%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001426-000!5e0!3m2!1spt-BR!2sbr!4v1713984000000!5m2!1spt-BR!2sbr",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1009.6174257965748!2d-48.74138432522925!3d-22.070972855221235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf4b37a0318bc3%3A0x10f47752e005c827!2sCl%C3%ADnica%20Visa%20Vida!5e1!3m2!1sen!2sbr!4v1747347291623!5m2!1sen!2sbr",
     },
     {
       id: "alphaville",
-      name: "Unidade Alphaville",
-      address: "Alameda Rio Negro, 200 - Alphaville, Barueri - SP",
+      name: "Bauru - SP",
+      address: "Av. Getúlio Vargas, 22-25 - Torre 1 - Salas 205/206 - Jardim Europa",
       mapUrl:
-        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1744761458855!2d-46.85982492392147!3d-23.5184166788378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf02a9d519a5c1%3A0x4b7e5c9e8f9a0f5e!2sAl.%20Rio%20Negro%2C%20200%20-%20Alphaville%20Industrial%2C%20Barueri%20-%20SP%2C%2006454-000!5e0!3m2!1spt-BR!2sbr!4v1713984000000!5m2!1spt-BR!2sbr",
+        "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1053.9733492716953!2d-49.050434375856824!3d-22.352166807532754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bf6705cdd02fa7%3A0xff921acf2ec69da6!2sPrime%20Square%20-%20Centro%20Empresarial!5e1!3m2!1sen!2sbr!4v1747347349301!5m2!1sen!2sbr",
     },
   ];
 
