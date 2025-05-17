@@ -9,7 +9,6 @@ interface WorkShowcaseProps {
 }
 
 export default function WorkShowcaseCarousel({ category }: WorkShowcaseProps) {
-  // Get showcase items based on category
   const getShowcaseItems = () => {
     switch (category) {
       case "lipoHD":
