@@ -33,7 +33,7 @@ export default function AllProcedures() {
       Esta técnica é especialmente eficaz para corrigir flacidez moderada a severa no terço médio da face, linha da mandíbula e pescoço, com resultados que podem durar de 8 a 12 anos.
   
       O Dr. Marcos Storion utiliza as técnicas mais modernas e seguras, garantindo resultados naturais que preservam as características individuais de cada paciente, evitando o aspecto "esticado" ou artificial.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/deepplane.jpg",
       category: "face",
     },
     {
@@ -63,7 +63,7 @@ export default function AllProcedures() {
       Ideal para pacientes com sinais moderados a avançados de envelhecimento facial, o FaceLift trata principalmente o terço inferior da face e pescoço, melhorando o contorno mandibular e reduzindo os sulcos nasolabiais.
   
       O Dr. Marcos Storion adapta a técnica às necessidades específicas de cada paciente, garantindo resultados naturais que respeitam as características individuais, com duração média de 5 a 8 anos.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/FaceLift.jpeg",
       category: "face",
     },
     {
@@ -77,7 +77,7 @@ export default function AllProcedures() {
       As incisões são realizadas em locais estratégicos que seguem as dobras naturais da pálpebra, tornando as cicatrizes praticamente imperceptíveis após a cicatrização completa.
   
       Os resultados incluem um olhar mais descansado, jovem e expressivo, com recuperação relativamente rápida de aproximadamente 7 a 10 dias para retorno às atividades sociais.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/blefaroplastia.jpg",
       category: "face",
     },
     {
@@ -91,7 +91,7 @@ export default function AllProcedures() {
       Funcionalmente, a rinoplastia pode corrigir problemas respiratórios causados por desvio de septo, hipertrofia de cornetos ou outras alterações estruturais que dificultam a respiração adequada.
   
       O Dr. Marcos Storion realiza um planejamento individualizado, considerando as características anatômicas e expectativas do paciente, utilizando técnicas modernas que garantem resultados naturais e harmonização facial.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/rinoest.jpg",
       category: "face",
     },
     {
@@ -106,14 +106,14 @@ export default function AllProcedures() {
       Este procedimento pode ser realizado em crianças a partir dos 6-7 anos de idade, quando a orelha já atingiu cerca de 85% do seu tamanho adulto, ou em qualquer fase da vida adulta.
   
       Os resultados são permanentes e proporcionam significativa melhora na autoestima, especialmente em crianças e adolescentes que frequentemente sofrem bullying devido à proeminência das orelhas.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/Otoplastia.png",
       category: "face",
     },
     {
       id: "mentoplastia",
       title: "Mentoplastia",
       shortDescription:
-        "Cirurgia para harmonização do queixo, corrigindo desproporções através de implantes ou redução ��ssea.",
+        "Cirurgia para harmonização do queixo, corrigindo desproporções através de implantes ou redução óssea.",
       fullDescription: `A Mentoplastia é uma cirurgia de remodelação do queixo que visa corrigir desproporções faciais, podendo ser de aumento (através da colocação de implantes) ou redução (através da remodelação óssea).
   
       O procedimento de aumento utiliza implantes de silicone sólido ou outros biomateriais compatíveis, inseridos através de incisões discretas realizadas internamente na boca ou externamente sob o queixo.
@@ -121,7 +121,7 @@ export default function AllProcedures() {
       Nos casos de redução, é realizada a remodelação óssea para diminuir projeções excessivas do mento, harmonizando o perfil facial do paciente.
   
       A mentoplastia frequentemente é associada a outros procedimentos como rinoplastia ou lipoaspiração de papada para um resultado facial mais harmônico, equilibrando as proporções entre nariz, queixo e pescoço.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/Mentoplastia.png",
       category: "face",
     },
     {
@@ -136,7 +136,7 @@ export default function AllProcedures() {
       A técnica utiliza incisões internas na boca, não deixando cicatrizes visíveis, e pode ser associada a outros procedimentos como mentoplastia ou lipoaspiração de papada para um resultado facial ainda mais harmonioso.
   
       Este procedimento é muito procurado por pacientes que desejam uma aparência facial mais definida e angular, especialmente homens que buscam uma expressão mais masculina através do contorno mandibular bem delineado.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/mandibula.jpeg",
       category: "face",
     },
     {
@@ -150,7 +150,7 @@ export default function AllProcedures() {
       O Dr. Marcos Storion emprega técnicas avançadas como a lipoaspiração VASER (ultrassônica) ou lipoaspiração laser, que promovem a emulsificação da gordura antes da aspiração, reduzindo o trauma aos tecidos adjacentes e facilitando a recuperação.
   
       É importante ressaltar que a lipoaspiração não é um tratamento para obesidade, mas sim para remodelação corporal em pacientes próximos do peso ideal que apresentam acúmulos localizados de gordura.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/Lipoaspiracao.jpeg",
       category: "body",
     },
     {
@@ -164,7 +164,7 @@ export default function AllProcedures() {
       Os implantes modernos possuem alta tecnologia e segurança, com envoltório de silicone coesivo (gel de silicone) que mantém sua integridade mesmo em caso de ruptura do envoltório.
   
       Os resultados proporcionam maior volume mamário, melhora na projeção e simetria dos seios, com consequente aumento da autoestima e satisfação com a imagem corporal.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/mamaaumento.jpeg",
       category: "body",
     },
     {
@@ -178,7 +178,7 @@ export default function AllProcedures() {
       A técnica cirúrgica varia conforme o grau de ptose e pode incluir diferentes tipos de incisões (periareolar, vertical ou em "T" invertido), sempre buscando cicatrizes mínimas e bem posicionadas.
   
       A mastopexia pode ser realizada isoladamente ou associada à colocação de implantes (mastopexia com prótese) quando, além da elevação, a paciente deseja aumento do volume mamário.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/mastopexia.jpg",
       category: "body",
     },
     {
@@ -193,7 +193,7 @@ export default function AllProcedures() {
       O procedimento também inclui a plicatura dos músculos retos abdominais (correção da diástase), reposicionamento do umbigo e remoção do excesso de pele abdominal, resultando em um abdome mais plano e contornado.
   
       Indicada principalmente para pacientes pós-gestação ou após grande perda de peso que apresentam flacidez abdominal, gordura localizada e enfraquecimento da parede muscular do abdome.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/lipom.jpeg",
       category: "body",
     },
     {
@@ -207,7 +207,7 @@ export default function AllProcedures() {
       A técnica cirúrgica envolve a remoção precisa do tecido excedente dos pequenos lábios, preservando sua sensibilidade e funcionalidade, com suturas absorvíveis que minimizam o desconforto no pós-operatório.
   
       A recuperação é relativamente rápida, com retorno às atividades normais em aproximadamente 7 dias e às relações sexuais após 30-40 dias, proporcionando maior conforto físico e melhora significativa na autoestima.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/ninfoplastia.jpg",
       category: "body",
     },
     {
@@ -221,7 +221,7 @@ export default function AllProcedures() {
       A gluteoplastia por lipoenxertia (Brazilian Butt Lift) utiliza gordura do próprio paciente, obtida por lipoaspiração de áreas com excesso e transferida para os glúteos após processamento adequado, proporcionando resultado mais natural.
   
       O Dr. Marcos Storion avalia individualmente cada caso para indicar a técnica mais adequada, considerando a quantidade de gordura disponível, as proporções corporais e as expectativas do paciente.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/gluteoplastia.jpg",
       category: "body",
     },
     {
@@ -236,7 +236,7 @@ export default function AllProcedures() {
       Em casos severos com grande excesso de pele, pode ser necessária a remoção de pele redundante, resultando em cicatrizes mais evidentes, porém cuidadosamente planejadas para máxima discrição.
   
       Os resultados incluem um tórax com contorno mais masculino e definido, cicatrizes mínimas e praticamente imperceptíveis na maioria dos casos, com significativa melhora da autoestima e qualidade de vida.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/ginecomastia.jpg",
       category: "body",
     },
     {
@@ -250,7 +250,7 @@ export default function AllProcedures() {
       Os implantes são selecionados de acordo com as características anatômicas do paciente e podem ser colocados para aumentar principalmente a parte medial da panturrilha (mais comum) ou ambos os lados, dependendo do objetivo estético.
   
       A cirurgia proporciona resultados permanentes com contorno natural, sendo especialmente procurada por pessoas com panturrilhas pouco desenvolvidas mesmo após treinamento físico intensivo, devido a fatores genéticos.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/panturrilha.png",
       category: "body",
     },
     {
@@ -265,7 +265,7 @@ export default function AllProcedures() {
       O cirurgião posiciona estrategicamente a cicatriz na face interna do braço, onde fica menos visível, utilizando técnicas de sutura que minimizam sua aparência final.
   
       O resultado é um braço com contorno mais definido e firme, proporcionando maior conforto físico e liberdade para usar roupas sem mangas, com recuperação que permite retorno às atividades normais em aproximadamente 2 a 3 semanas.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/liftbraco.jpg",
       category: "body",
     },
     {
@@ -280,7 +280,7 @@ export default function AllProcedures() {
       O procedimento não apenas remove o excesso de pele, mas também reposiciona os tecidos remanescentes, criando um contorno mais harmonioso e firme nas coxas.
   
       A recuperação exige cuidados especiais como uso de cinta compressiva por 4 a 6 semanas e restrição de atividades físicas intensas por pelo menos 1 mês, com resultados que proporcionam maior conforto ao caminhar e liberdade para usar roupas mais curtas.`,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/liftcoxa.jpeg",
       category: "body",
     },
   ]
