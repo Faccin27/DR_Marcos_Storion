@@ -15,25 +15,19 @@ export default function WorkShowcaseCarousel({ category }: WorkShowcaseProps) {
         return [
           {
             id: 1,
-            image: `/images/after.png`,
+            image: `/images/lipo-hd.jpg`,
             title: "Lipo HD",
             description: "Resultado de lipoaspiração de alta definição com técnica avançada para contorno corporal.",
           },
           {
             id: 2,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/lipohom.jpg`,
             title: "Lipo HD - Abdômen Masculino",
             description: "Definição abdominal masculina com técnica de lipoaspiração HD.",
           },
           {
             id: 3,
-            image: `/placeholder.svg?height=400&width=600`,
-            title: "Lipo HD - Contorno Feminino",
-            description: "Contorno corporal feminino com definição de cintura e abdômen.",
-          },
-          {
-            id: 4,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/lipom.jpeg`,
             title: "Lipo HD - Contorno Feminino",
             description: "Contorno corporal feminino com definição de cintura e abdômen.",
           },
@@ -42,19 +36,19 @@ export default function WorkShowcaseCarousel({ category }: WorkShowcaseProps) {
         return [
           {
             id: 1,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/rinoest.jpg`,
             title: "Rinoplastia Estrutural",
             description: "Correção de dorso nasal e ponta com preservação da função respiratória.",
           },
           {
             id: 2,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/rinoetnica.jpg`,
             title: "Rinoplastia Étnica",
             description: "Harmonização nasal respeitando características étnicas do paciente.",
           },
           {
             id: 3,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/rinosec.png`,
             title: "Rinoplastia Secundária",
             description: "Correção de resultados anteriores com técnicas avançadas de reconstrução.",
           },
@@ -63,19 +57,19 @@ export default function WorkShowcaseCarousel({ category }: WorkShowcaseProps) {
         return [
           {
             id: 1,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/mamaaumento.jpeg`,
             title: "Mamoplastia de Aumento",
             description: "Aumento mamário com implantes de silicone para resultados naturais.",
           },
           {
             id: 2,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/mastopexia.jpg`,
             title: "Mastopexia",
             description: "Elevação mamária com correção de ptose e reposicionamento do complexo aréolo-papilar.",
           },
           {
             id: 3,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/mamaredus.jpg`,
             title: "Mamoplastia Redutora",
             description: "Redução mamária para alívio de dores e melhora estética.",
           },
@@ -84,19 +78,19 @@ export default function WorkShowcaseCarousel({ category }: WorkShowcaseProps) {
         return [
           {
             id: 1,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/ritidoplastia.png`,
             title: "Ritidoplastia",
             description: "Rejuvenescimento facial com técnica de SMAS para resultados naturais e duradouros.",
           },
           {
             id: 2,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/blefaroplastia.jpg`,
             title: "Blefaroplastia",
             description: "Correção de pálpebras superiores e inferiores para um olhar mais descansado.",
           },
           {
             id: 3,
-            image: `/placeholder.svg?height=400&width=600`,
+            image: `/images/facial.png`,
             title: "Harmonização Facial",
             description: "Procedimentos combinados para harmonização completa da face.",
           },
