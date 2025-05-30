@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -128,23 +128,29 @@ export default function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-col gap-4 sm:flex-row"
               >
-                <Button className="group relative overflow-hidden bg-[#d4af37] text-white hover:bg-[#d4af37]">
-                  <span className="relative z-10 flex items-center">
-                    <Link target="_blank" href="https://api.whatsapp.com/send?phone=5511934167007&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20o%20Dr.%20Marcos%20!">
-                      Agende sua consulta
-                    </Link>
-                    <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                  <span className="absolute inset-0 -translate-x-full bg-[#b8971f] transition-transform group-hover:translate-x-0" />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37]/10 hover:text-white"
+                <Link
+                  target="_blank"
+                  href="https://api.whatsapp.com/send?phone=5511934167007&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20o%20Dr.%20Marcos%20!"
                 >
-                  <Link target="_blank" href="https://api.whatsapp.com/send?phone=5511934167007&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20o%20Dr.%20Marcos%20!">
+                  <Button className="group relative overflow-hidden bg-[#d4af37] text-white hover:bg-[#d4af37]">
+                    <span className="relative z-10 flex items-center">
+                      Agende sua consulta
+                      <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                    <span className="absolute inset-0 -translate-x-full bg-[#b8971f] transition-transform group-hover:translate-x-0" />
+                  </Button>
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://api.whatsapp.com/send?phone=5511934167007&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20o%20Dr.%20Marcos%20!"
+                >
+                  <Button
+                    variant="outline"
+                    className="border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37]/10 hover:text-white"
+                  >
                     Fale pelo WhatsApp
-                  </Link>
-                </Button>
+                  </Button>
+                </Link>
               </motion.div>
             </div>
 
