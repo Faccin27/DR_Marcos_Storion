@@ -1,67 +1,90 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Image from "next/image"
-import { motion, AnimatePresence } from "framer-motion"
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react"
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 interface Testimonial {
-  id: number
-  name: string
-  text: string
-  role?: string
-  rating: number
-  image?: string
+  id: number;
+  name: string;
+  text: string;
+  role?: string;
+  rating: number;
+  image?: string;
 }
 
 export default function AnimatedTestimonials() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: "Ana Silva",
-      role: "Rinoplastia",
-      text: "O Dr. Marcos transformou não apenas meu nariz, mas minha autoconfiança. O resultado ficou extremamente natural e o processo de recuperação foi exatamente como ele descreveu. Sua atenção aos detalhes é impressionante.",
+      name: "Cristina Senise",
+      role: "Botox e Radiesse",
+      text: "Se você busca um upgrade natural e sofisticado, o Dr. Marcos é THE ONE. Os procedimentos que faço com ele com frequência são: Botox e Radiesse, o resultado é sempre exatamente o que eu queria: natural, sem excessos, apenas realçando o melhor no meu rosto. O que mais me impressiona é a precisão do trabalho dele. Como cirurgião plástico, ele tem um olhar apurado para os detalhes, aplicando cada procedimento com técnica refinada e extrema atenção à anatomia do rosto. Isso faz toda a diferença para que as cicatrizes fiquem imperceptíveis e o efeito seja harmônico e elegante. Ele domina os tratamentos mais modernos, como Morpheus e Ulthera, que elevam a firmeza da pele e garantem aquele efeito de rejuvenescimento sem parecer que você “fez algo”. O consultório é lindo, o atendimento impecável e a experiência, do início ao fim, transmite confiança. Se você busca um cirurgião plástico de primeiríssima, achou.",
       rating: 5,
     },
     {
       id: 2,
-      name: "Carlos Mendes",
-      role: "Lipo HD",
-      text: "Após anos de academia sem conseguir definir meu abdômen, o Dr. Storion realizou uma Lipo HD que transformou meu corpo. O profissionalismo da equipe e o acompanhamento pós-operatório foram excepcionais.",
+      name: "Neusa Paiola Paiola",
+      role: "Blefaroplastia e Abdominoplastia",
+      text: "Excelente profissional. O escolhi como cirurgião plástico para fazer minha blefaroplastia e abdominoplastia. Dr Marcos está sempre atualizado e atento as melhores práticas e produtos disponíveis no mercado. Cuidadoso, super atento aos detalhes e muito simpático, o resultado superou minhas expectativas! Super recomendo!",
       rating: 5,
     },
     {
       id: 3,
-      name: "Juliana Costa",
-      role: "Mamoplastia",
-      text: "Minha experiência com o Dr. Marcos foi incrível do início ao fim. Ele entendeu exatamente o que eu queria e o resultado superou minhas expectativas. Me sinto mais feminina e confiante.",
+      name: "DENISE MATTOS",
+      role: "Deepplane Facelift",
+      text: "Eu fiz um deepplane facelift com Dr Marcos. Simplesmente o toque da perfeição. O detalhe pós cirúrgico, é que, absolutamente imperceptível o que fora feito. Ganhei 20 anos, essa é a verdade. Dr Marcos foi de um profissionalismo inenarrável. Além do trabalho brilhante no meu rosto, recebi a melhor das atenções possíveis. Inclusive, com menos de 10 dias de cirurgia atendi um cliente, sem nenhum problema. O acompanhamento dele era diário, mandando mensagem e solicitando fotografias. Além disso, não posso mensurar os inúmeros retornos ao consultório… sempre com a mesma atenção, cuidado e carinho. Não tive edemas, tampouco fiquei com manchas arroxeadas. Ansiosa para passar novamente por essas mãos brilhantes, abençoadas por Deus! Em síntese… Felicidade que não se mede.",
       rating: 5,
     },
-  ]
+    {
+      id: 4,
+      name: "Larissa Rocha",
+      role: "Botox",
+      text: "Ao chegar na clínica, a minha experiência já foi maravilhosa, um local lindo, receptivo e impecável. Procurei o Doutor Marcos Storion pois queria fazer pela primeira vez o procedimento de botox, e o Doutor com todo seu conhecimento me explicou sobre o procedimento, tirou minhas dúvidas e me explicou que o procedimento ficaria com naturalidade, que seria minha maior dúvida! E agora sou refém dos procedimentos que o Doutor Marcos Storion faz no meu rosto! Sempre que me elogiam eu digo, esse rosto tem nome Doutor Marcos Storion o melhor profissional.",
+      rating: 5,
+    },
+    {
+      id: 5,
+      name: "Mara Romero",
+      role: "Blefaroplastia, Abdômen e Seios",
+      text: "Dr Marcos é o melhor profissional em cirurgia plástica e procedimentos, é minucioso e delicado nos pontos da cirurgia, a cicatriz posso dizer que não existe, dedicado aos pacientes, atencioso, nos ouve, procura tornar nossa experiência a melhor possível, além de ser um ser humano incrível. Eu o recomendo, fiz com ele blefaroplastia, abdômen e seios e vou fazer deep plane face muito em breve. Amooo esse médico",
+      rating: 5,
+    },
+    {
+      id: 5,
+      name: "Celso Fernandes",
+      role: "Harmonização Facial",
+      text: "Fiz uma harmonização facial com Dr Marcos, fui muito bem atendido, recebi toda orientação necessária e o resultado ficou fantástico.",
+      rating: 5,
+    },
+  ];
 
-  const [current, setCurrent] = useState(0)
-  const [direction, setDirection] = useState(0)
-  const [autoplay, setAutoplay] = useState(true)
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(0);
+  const [autoplay, setAutoplay] = useState(true);
 
   const nextTestimonial = () => {
-    setDirection(1)
-    setCurrent((prev) => (prev + 1) % testimonials.length)
-  }
+    setDirection(1);
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevTestimonial = () => {
-    setDirection(-1)
-    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setDirection(-1);
+    setCurrent(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
 
   useEffect(() => {
-    if (!autoplay) return
+    if (!autoplay) return;
 
     const interval = setInterval(() => {
-      nextTestimonial()
-    }, 8000)
+      nextTestimonial();
+    }, 8000);
 
-    return () => clearInterval(interval)
-  }, [autoplay, current])
+    return () => clearInterval(interval);
+  }, [autoplay, current]);
 
   const variants = {
     enter: (direction: number) => ({
@@ -76,9 +99,9 @@ export default function AnimatedTestimonials() {
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
     }),
-  }
+  };
 
-  const testimonial = testimonials[current]
+  const testimonial = testimonials[current];
 
   return (
     <div className="relative mx-auto max-w-6xl overflow-hidden py-16">
@@ -133,7 +156,11 @@ export default function AnimatedTestimonials() {
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star
                   key={i}
-                  className={`h-6 w-6 ${i < testimonial.rating ? "fill-[#d4af37] text-[#d4af37]" : "text-gray-300"}`}
+                  className={`h-6 w-6 ${
+                    i < testimonial.rating
+                      ? "fill-[#d4af37] text-[#d4af37]"
+                      : "text-gray-300"
+                  }`}
                 />
               ))}
             </div>
@@ -152,8 +179,12 @@ export default function AnimatedTestimonials() {
               transition={{ delay: 0.3 }}
               className="text-center"
             >
-              <h3 className="text-xl font-bold text-[#2c3e50]">{testimonial.name}</h3>
-              {testimonial.role && <p className="text-sm text-[#d4af37]">{testimonial.role}</p>}
+              <h3 className="text-xl font-bold text-[#2c3e50]">
+                {testimonial.name}
+              </h3>
+              {testimonial.role && (
+                <p className="text-sm text-[#d4af37]">{testimonial.role}</p>
+              )}
             </motion.div>
           </motion.div>
         </AnimatePresence>
@@ -161,8 +192,8 @@ export default function AnimatedTestimonials() {
         <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 justify-between px-1">
           <button
             onClick={() => {
-              prevTestimonial()
-              setAutoplay(false)
+              prevTestimonial();
+              setAutoplay(false);
             }}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-[#2c3e50] shadow-md backdrop-blur-sm transition-all hover:bg-[#d4af37] hover:text-white"
             aria-label="Previous testimonial"
@@ -171,8 +202,8 @@ export default function AnimatedTestimonials() {
           </button>
           <button
             onClick={() => {
-              nextTestimonial()
-              setAutoplay(false)
+              nextTestimonial();
+              setAutoplay(false);
             }}
             className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-[#2c3e50] shadow-md backdrop-blur-sm transition-all hover:bg-[#d4af37] hover:text-white"
             aria-label="Next testimonial"
@@ -186,9 +217,9 @@ export default function AnimatedTestimonials() {
             <button
               key={index}
               onClick={() => {
-                setDirection(index > current ? 1 : -1)
-                setCurrent(index)
-                setAutoplay(false)
+                setDirection(index > current ? 1 : -1);
+                setCurrent(index);
+                setAutoplay(false);
               }}
               className={`h-2 w-2 rounded-full transition-all ${
                 index === current ? "w-8 bg-[#d4af37]" : "bg-gray-300"
@@ -199,5 +230,5 @@ export default function AnimatedTestimonials() {
         </div>
       </div>
     </div>
-  )
+  );
 }

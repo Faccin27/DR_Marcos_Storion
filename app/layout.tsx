@@ -1,9 +1,8 @@
-import type React from "react";
-import { Inter } from "next/font/google";
 import type { Metadata } from "next";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { Inter } from "next/font/google";
 import Head from "next/head";
+import type React from "react";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <Head>
         {/* SEO Básico */}
         <title>Dr. Marcos Storion - Cirurgião Plástico</title>
@@ -51,11 +50,7 @@ export default function RootLayout({
         />
         <meta name="twitter:image" content="/images/doctor.jpeg" />
       </Head>
-      <body className={`${inter.className} overflow-x-hidden` }  >
-
-          {children}
-
-      </body>
+      <body className={`${inter.className} overflow-x-hidden`}>{children}</body>
     </html>
   );
 }

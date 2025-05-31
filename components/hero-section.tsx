@@ -130,6 +130,7 @@ export default function HeroSection() {
               >
                 <Link
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://api.whatsapp.com/send?phone=5511934167007&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20o%20Dr.%20Marcos%20!"
                 >
                   <Button className="group relative overflow-hidden bg-[#d4af37] text-white hover:bg-[#d4af37]">
@@ -142,6 +143,7 @@ export default function HeroSection() {
                 </Link>
                 <Link
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://api.whatsapp.com/send?phone=5511934167007&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20marcar%20uma%20consulta%20com%20o%20Dr.%20Marcos%20!"
                 >
                   <Button

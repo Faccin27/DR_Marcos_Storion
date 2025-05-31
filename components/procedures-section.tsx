@@ -1,12 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import { useEffect, useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import AnimatedServiceCard from "./animated-service-card";
+import {
+  AnimatePresence,
+  motion,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import AllProcedures from "./all-procedures";
+import AnimatedServiceCard from "./animated-service-card";
 import ProcedureModal from "./procedure-modal";
 
 interface Procedure {
@@ -178,7 +181,7 @@ export default function ProceduresSection() {
       O Dr. Marcos Storion utiliza as técnicas mais modernas e seguras, garantindo resultados naturais que preservam as características individuais de cada paciente, evitando o aspecto "esticado" ou artificial.`,
       icon: "Droplets",
       index: 0,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/deepplane.jpg",
     },
     {
       title: "Neck Lift",
@@ -187,7 +190,7 @@ export default function ProceduresSection() {
       fullDescription: `O Neck Lift é um procedimento cirúrgico especializado no rejuvenescimento do pescoço, ideal para pacientes que apresentam flacidez cutânea, bandas platismais proeminentes ou acúmulo de gordura na região submentoniana. Durante a cirurgia, são realizadas incisões discretas atrás das orelhas e, em alguns casos, sob o queixo, permitindo a remoção do excesso de pele e gordura, além do reposicionamento dos músculos do pescoço. O procedimento pode ser realizado isoladamente ou em conjunto com um facelift, dependendo das necessidades individuais do paciente e da avaliação do cirurgião. Os resultados incluem um contorno cervical mais definido, aparência mais jovem e harmoniosa, com recuperação média de 2 a 3 semanas para as principais atividades sociais.`,
       icon: "Scissors",
       index: 1,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/necklift.png",
     },
     {
       title: "FaceLift",
@@ -196,7 +199,7 @@ export default function ProceduresSection() {
       fullDescription: `O FaceLift tradicional, também conhecido como ritidoplastia, é um procedimento cirúrgico que visa rejuvenescer a face através da remoção do excesso de pele e reposicionamento dos tecidos faciais. A técnica envolve incisões discretas ao redor das orelhas, permitindo ao cirurgião tratar a flacidez da pele e do SMAS (Sistema Músculo-Aponeurótico Superficial), resultando em uma aparência mais jovem e descansada. Ideal para pacientes com sinais moderados a avançados de envelhecimento facial, o FaceLift trata principalmente o terço inferior da face e pescoço, melhorando o contorno mandibular e reduzindo os sulcos nasolabiais. O Dr. Marcos Storion adapta a técnica às necessidades específicas de cada paciente, garantindo resultados naturais que respeitam as características individuais, com duração média de 5 a 8 anos.`,
       icon: "Heart",
       index: 2,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/FaceLift.jpeg",
     },
     {
       title: "Blefaroplastia",
@@ -205,7 +208,7 @@ export default function ProceduresSection() {
       fullDescription: `A Blefaroplastia é uma cirurgia plástica focada no rejuvenescimento da região dos olhos, tratando o excesso de pele nas pálpebras superiores e/ou inferiores, além das bolsas de gordura que causam aspecto de cansaço e envelhecimento. Nas pálpebras superiores, o procedimento remove o excesso de pele que pode até mesmo interferir na visão em casos mais severos. Nas pálpebras inferiores, são tratadas as bolsas de gordura e a flacidez cutânea. As incisões são realizadas em locais estratégicos que seguem as dobras naturais da pálpebra, tornando as cicatrizes praticamente imperceptíveis após a cicatrização completa. Os resultados incluem um olhar mais descansado, jovem e expressivo, com recuperação relativamente rápida de aproximadamente 7 a 10 dias para retorno às atividades sociais.`,
       icon: "Sparkles",
       index: 3,
-      image: "/placeholder.svg?height=300&width=600",
+      image: "/images/blefaroplastia.jpg",
     },
   ];
 
@@ -228,7 +231,7 @@ export default function ProceduresSection() {
       />
 
       <div className="container relative z-10 px-4 md:px-6">
-        <div className="mb-10 text-center">
+        <div className="mb-10 text-center ">
           <h2 className="text-3xl font-bold text-[#2c3e50]">
             Serviços Oferecidos
           </h2>{" "}
@@ -245,7 +248,7 @@ export default function ProceduresSection() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 ">
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {featuredProcedures.map((procedure) => (
                   <AnimatedServiceCard
                     key={procedure.title}
