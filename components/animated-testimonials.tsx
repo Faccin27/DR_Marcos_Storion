@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion"
+import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react"
+import Image from "next/image"
+import { useEffect, useState } from "react"
 
 interface Testimonial {
-  id: number;
-  name: string;
-  text: string;
-  role?: string;
-  rating: number;
-  image?: string;
+  id: number
+  name: string
+  text: string
+  role?: string
+  rating: number
+  image?: string
 }
 
 export default function AnimatedTestimonials() {
@@ -58,33 +58,31 @@ export default function AnimatedTestimonials() {
       text: "Fiz uma harmonização facial com Dr Marcos, fui muito bem atendido, recebi toda orientação necessária e o resultado ficou fantástico.",
       rating: 5,
     },
-  ];
+  ]
 
-  const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(0);
-  const [autoplay, setAutoplay] = useState(true);
+  const [current, setCurrent] = useState(0)
+  const [direction, setDirection] = useState(0)
+  const [autoplay, setAutoplay] = useState(true)
 
   const nextTestimonial = () => {
-    setDirection(1);
-    setCurrent((prev) => (prev + 1) % testimonials.length);
-  };
+    setDirection(1)
+    setCurrent((prev) => (prev + 1) % testimonials.length)
+  }
 
   const prevTestimonial = () => {
-    setDirection(-1);
-    setCurrent(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    );
-  };
+    setDirection(-1)
+    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  }
 
   useEffect(() => {
-    if (!autoplay) return;
+    if (!autoplay) return
 
     const interval = setInterval(() => {
-      nextTestimonial();
-    }, 8000);
+      nextTestimonial()
+    }, 8000)
 
-    return () => clearInterval(interval);
-  }, [autoplay, current]);
+    return () => clearInterval(interval)
+  }, [autoplay, current])
 
   const variants = {
     enter: (direction: number) => ({
@@ -99,12 +97,12 @@ export default function AnimatedTestimonials() {
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
     }),
-  };
+  }
 
-  const testimonial = testimonials[current];
+  const testimonial = testimonials[current]
 
   return (
-    <div className="relative mx-auto max-w-6xl overflow-hidden py-16">
+    <div className="relative mx-auto max-w-6xl overflow-hidden py-8 md:py-16">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.05 }}
@@ -120,7 +118,7 @@ export default function AnimatedTestimonials() {
         "
       </motion.div>
 
-      <div className="relative mx-auto max-w-4xl px-4">
+      <div className="relative mx-auto max-w-4xl px-4 md:px-8">
         <AnimatePresence initial={false} custom={direction} mode="wait">
           <motion.div
             key={current}
@@ -156,21 +154,17 @@ export default function AnimatedTestimonials() {
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star
                   key={i}
-                  className={`h-6 w-6 ${
-                    i < testimonial.rating
-                      ? "fill-[#d4af37] text-[#d4af37]"
-                      : "text-gray-300"
-                  }`}
+                  className={`h-6 w-6 ${i < testimonial.rating ? "fill-[#d4af37] text-[#d4af37]" : "text-gray-300"}`}
                 />
               ))}
             </div>
 
-            <div className="relative mb-6">
-              <Quote className="absolute -left-10 -top-6 h-8 w-8 text-[#d4af37] opacity-30" />
-              <p className="text-center text-xl font-light italic leading-relaxed text-gray-700 md:text-2xl w-11/12 mx-auto">
+            <div className="relative mb-6 px-4 md:px-8">
+              <Quote className="absolute -left-2 -top-4 h-6 w-6 text-[#d4af37] opacity-30 md:-left-6 md:-top-6 md:h-8 md:w-8" />
+              <p className="text-center text-base font-light italic leading-relaxed text-gray-700 md:text-lg lg:text-xl max-w-4xl mx-auto">
                 {testimonial.text}
               </p>
-              <Quote className="absolute -bottom-6 -right-10 h-8 w-8 rotate-180 text-[#d4af37] opacity-30" />
+              <Quote className="absolute -bottom-4 -right-2 h-6 w-6 rotate-180 text-[#d4af37] opacity-30 md:-bottom-6 md:-right-6 md:h-8 md:w-8" />
             </div>
 
             <motion.div
@@ -179,50 +173,48 @@ export default function AnimatedTestimonials() {
               transition={{ delay: 0.3 }}
               className="text-center"
             >
-              <h3 className="text-xl font-bold text-[#2c3e50]">
-                {testimonial.name}
-              </h3>
-              {testimonial.role && (
-                <p className="text-sm text-[#d4af37]">{testimonial.role}</p>
-              )}
+              <h3 className="text-xl font-bold text-[#2c3e50]">{testimonial.name}</h3>
+              {testimonial.role && <p className="text-sm text-[#d4af37]">{testimonial.role}</p>}
             </motion.div>
           </motion.div>
         </AnimatePresence>
 
-        <div className="absolute left-0 right-0 top-1/2 flex -translate-y-1/2 justify-between px-1">
+        {/* Setas de navegação com melhor posicionamento */}
+        <div className="hidden md:block">
           <button
             onClick={() => {
-              prevTestimonial();
-              setAutoplay(false);
+              prevTestimonial()
+              setAutoplay(false)
             }}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-[#2c3e50] shadow-md backdrop-blur-sm transition-all hover:bg-[#d4af37] hover:text-white"
+            className="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-[#2c3e50] shadow-lg backdrop-blur-sm transition-all hover:bg-[#d4af37] hover:text-white hover:scale-110"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             onClick={() => {
-              nextTestimonial();
-              setAutoplay(false);
+              nextTestimonial()
+              setAutoplay(false)
             }}
-            className="flex h-10 w-10 items-center justify-center rounded-full bg-white/80 text-[#2c3e50] shadow-md backdrop-blur-sm transition-all hover:bg-[#d4af37] hover:text-white"
+            className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-[#2c3e50] shadow-lg backdrop-blur-sm transition-all hover:bg-[#d4af37] hover:text-white hover:scale-110"
             aria-label="Next testimonial"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
         </div>
 
-        <div className="mt-8 flex justify-center gap-2">
+        {/* Indicadores com melhor espaçamento */}
+        <div className="mt-8 flex justify-center gap-3">
           {testimonials.map((_, index) => (
             <button
               key={index}
               onClick={() => {
-                setDirection(index > current ? 1 : -1);
-                setCurrent(index);
-                setAutoplay(false);
+                setDirection(index > current ? 1 : -1)
+                setCurrent(index)
+                setAutoplay(false)
               }}
               className={`h-2 w-2 rounded-full transition-all ${
-                index === current ? "w-8 bg-[#d4af37]" : "bg-gray-300"
+                index === current ? "w-8 bg-[#d4af37]" : "bg-gray-300 hover:bg-gray-400"
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             />
@@ -230,5 +222,5 @@ export default function AnimatedTestimonials() {
         </div>
       </div>
     </div>
-  );
+  )
 }
