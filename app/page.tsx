@@ -214,11 +214,31 @@ export default function Home() {
             </p>
           </div>
           <Tabs defaultValue="lipoHD" className="mx-auto max-w-6xl">
-            <TabsList className="grid w-full grid-cols-4">
-              <TabsTrigger value="lipoHD">Lipo HD</TabsTrigger>
-              <TabsTrigger value="rinoplastia">Rinoplastia</TabsTrigger>
-              <TabsTrigger value="mamoplastia">Mamoplastia</TabsTrigger>
-              <TabsTrigger value="facial">Harmonização</TabsTrigger>
+            <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto">
+              <TabsTrigger
+                value="lipoHD"
+                className="text-sm px-2 py-3 md:text-base md:px-4"
+              >
+                Lipo HD
+              </TabsTrigger>
+              <TabsTrigger
+                value="rinoplastia"
+                className="text-sm px-2 py-3 md:text-base md:px-4"
+              >
+                Rinoplastia
+              </TabsTrigger>
+              <TabsTrigger
+                value="mamoplastia"
+                className="text-sm px-2 py-3 md:text-base md:px-4"
+              >
+                Mamoplastia
+              </TabsTrigger>
+              <TabsTrigger
+                value="facial"
+                className="text-sm px-2 py-3 md:text-base md:px-4"
+              >
+                Harmonização
+              </TabsTrigger>
             </TabsList>
             <TabsContent value="lipoHD">
               <WorkShowcaseCarousel category="lipoHD" />
