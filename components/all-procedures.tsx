@@ -1,31 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import { ArrowRight, Droplets, Scissors, Heart, Sparkles } from "lucide-react"
-import ProcedureModal from "./procedure-modal"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Droplets, Scissors, Heart, Sparkles } from "lucide-react";
+import ProcedureModal from "./procedure-modal";
 
 interface Procedure {
-  id: string
-  title: string
-  shortDescription: string
-  fullDescription: string
-  icon?: string
-  image?: string
-  category: "face" | "body" | "breast" | "other"
+  id: string;
+  title: string;
+  shortDescription: string;
+  fullDescription: string;
+  icon?: string;
+  image?: string;
+  category: "face" | "body" | "breast" | "other";
 }
 
 export default function AllProcedures() {
-  const [activeTab, setActiveTab] = useState<"all" | "face" | "body" | "breast" | "other">("all")
-  const [selectedProcedure, setSelectedProcedure] = useState<Procedure | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+  const [activeTab, setActiveTab] = useState<
+    "all" | "face" | "body" | "breast" | "other"
+  >("all");
+  const [selectedProcedure, setSelectedProcedure] = useState<Procedure | null>(
+    null
+  );
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   const procedures: Procedure[] = [
     {
       id: "deep-plane-facelift",
       title: "Deep Plane FaceLift",
-      shortDescription: "Técnica avançada de rejuvenescimento facial com resultados naturais e duradouros.",
+      shortDescription:
+        "Técnica avançada de rejuvenescimento facial com resultados naturais e duradouros.",
       fullDescription: `O Deep Plane FaceLift é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
   
       Diferente das técnicas tradicionais, o Deep Plane FaceLift reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
@@ -69,7 +74,8 @@ export default function AllProcedures() {
     {
       id: "blefaroplastia",
       title: "Blefaroplastia",
-      shortDescription: "Cirurgia para rejuvenescimento das pálpebras, removendo excesso de pele e bolsas de gordura.",
+      shortDescription:
+        "Cirurgia para rejuvenescimento das pálpebras, removendo excesso de pele e bolsas de gordura.",
       fullDescription: `A Blefaroplastia é uma cirurgia plástica focada no rejuvenescimento da região dos olhos, tratando o excesso de pele nas pálpebras superiores e/ou inferiores, além das bolsas de gordura que causam aspecto de cansaço e envelhecimento.
   
       Nas pálpebras superiores, o procedimento remove o excesso de pele que pode até mesmo interferir na visão em casos mais severos. Nas pálpebras inferiores, são tratadas as bolsas de gordura e a flacidez cutânea.
@@ -83,7 +89,8 @@ export default function AllProcedures() {
     {
       id: "rinoplastia",
       title: "Rinoplastia",
-      shortDescription: "Cirurgia para harmonização e remodelação do nariz, melhorando estética e função respiratória.",
+      shortDescription:
+        "Cirurgia para harmonização e remodelação do nariz, melhorando estética e função respiratória.",
       fullDescription: `A Rinoplastia é uma cirurgia plástica que visa remodelar e harmonizar o nariz, podendo ter finalidades estéticas e/ou funcionais, dependendo das necessidades de cada paciente.
   
       Do ponto de vista estético, a cirurgia pode corrigir diversos aspectos como: dorso nasal alto ou baixo, ponta bulbosa ou caída, narinas largas, desvios visíveis e assimetrias, sempre buscando harmonização com os demais traços faciais.
@@ -142,7 +149,8 @@ export default function AllProcedures() {
     {
       id: "lipoaspiracao",
       title: "Lipoaspiração",
-      shortDescription: "Técnica cirúrgica para remoção de gordura localizada e remodelação corporal.",
+      shortDescription:
+        "Técnica cirúrgica para remoção de gordura localizada e remodelação corporal.",
       fullDescription: `A Lipoaspiração é um procedimento cirúrgico de contorno corporal que remove depósitos de gordura resistentes à dieta e exercícios, melhorando as proporções e silhueta do corpo.
   
       A técnica moderna utiliza cânulas de pequeno calibre inseridas através de incisões mínimas, que permitem a sucção controlada da gordura subcutânea de diversas áreas como abdome, flancos, costas, braços, coxas e papada.
@@ -156,7 +164,8 @@ export default function AllProcedures() {
     {
       id: "mamoplastia-aumento",
       title: "Mamoplastia de Aumento",
-      shortDescription: "Cirurgia para aumento do volume mamário através da colocação de implantes de silicone.",
+      shortDescription:
+        "Cirurgia para aumento do volume mamário através da colocação de implantes de silicone.",
       fullDescription: `A Mamoplastia de Aumento é uma cirurgia plástica que visa aumentar o volume e melhorar a forma dos seios através da colocação de implantes mamários de silicone.
   
       O procedimento é personalizado de acordo com as características anatômicas e desejos de cada paciente, considerando aspectos como: tipo de implante (redondo ou anatômico), volume adequado às proporções corporais, posicionamento (subglandular, submuscular ou plano dual), e via de acesso (periareolar, inframamária ou axilar).
@@ -170,7 +179,8 @@ export default function AllProcedures() {
     {
       id: "mastopexia",
       title: "Mastopexia",
-      shortDescription: "Cirurgia para elevação e remodelação das mamas que apresentam ptose (queda).",
+      shortDescription:
+        "Cirurgia para elevação e remodelação das mamas que apresentam ptose (queda).",
       fullDescription: `A Mastopexia é um procedimento cirúrgico que visa elevar e remodelar as mamas que apresentam ptose (queda), devolvendo-lhes uma aparência mais jovem e projetada.
   
       As causas mais comuns da ptose mamária incluem gravidez e amamentação, grandes variações de peso, envelhecimento natural e predisposição genética, fazendo com que o tecido mamário perca firmeza e a aréola se posicione abaixo do sulco inframamário.
@@ -199,7 +209,8 @@ export default function AllProcedures() {
     {
       id: "ninfoplastia",
       title: "Ninfoplastia",
-      shortDescription: "Cirurgia íntima feminina para redução ou remodelação dos pequenos lábios vaginais.",
+      shortDescription:
+        "Cirurgia íntima feminina para redução ou remodelação dos pequenos lábios vaginais.",
       fullDescription: `A Ninfoplastia, também conhecida como labioplastia, é uma cirurgia íntima feminina que visa reduzir ou remodelar os pequenos lábios vaginais (ninfas) quando estes são desproporcionalmente grandes ou assimétricos.
   
       O procedimento é indicado para mulheres que apresentam desconforto físico durante atividades cotidianas ou íntimas, irritação e problemas de higiene devido ao excesso de tecido labial, além daquelas que buscam melhoria estética da região.
@@ -213,7 +224,8 @@ export default function AllProcedures() {
     {
       id: "gluteoplastia",
       title: "Gluteoplastia",
-      shortDescription: "Cirurgia para aumento e remodelação dos glúteos através de implantes ou lipoenxertia.",
+      shortDescription:
+        "Cirurgia para aumento e remodelação dos glúteos através de implantes ou lipoenxertia.",
       fullDescription: `A Gluteoplastia é um procedimento cirúrgico que visa aumentar o volume e melhorar o contorno dos glúteos, podendo ser realizada através de duas técnicas principais: implantes de silicone ou lipoenxertia (transferência de gordura).
   
       Na técnica com implantes, próteses especiais de silicone coesivo são inseridas através de uma incisão discreta no sulco interglúteo, posicionadas em plano submuscular ou intramuscular para resultado natural.
@@ -242,7 +254,8 @@ export default function AllProcedures() {
     {
       id: "implantes-panturrilha",
       title: "Implantes de Panturrilha",
-      shortDescription: "Procedimento para aumento e definição das panturrilhas através de implantes personalizados.",
+      shortDescription:
+        "Procedimento para aumento e definição das panturrilhas através de implantes personalizados.",
       fullDescription: `Os Implantes de Panturrilha são uma solução cirúrgica para pacientes que desejam aumentar o volume e melhorar a definição das panturrilhas, seja por razões estéticas ou para corrigir assimetrias e deformidades.
   
       O procedimento utiliza implantes de silicone coesivo, especialmente desenhados para a região da panturrilha, que são inseridos através de incisões discretas no sulco posterior do joelho, posicionados em plano subfascial ou submuscular.
@@ -283,32 +296,34 @@ export default function AllProcedures() {
       image: "/images/liftcoxa.jpeg",
       category: "body",
     },
-  ]
+  ];
 
   const openModal = (procedure: Procedure) => {
-    setSelectedProcedure(procedure)
-    setIsModalOpen(true)
-  }
+    setSelectedProcedure(procedure);
+    setIsModalOpen(true);
+  };
 
   const closeModal = () => {
-    setIsModalOpen(false)
-  }
+    setIsModalOpen(false);
+  };
 
   const getIcon = (category: string) => {
     switch (category) {
       case "face":
-        return <Sparkles className="h-8 w-8 text-[#d4af37]" />
+        return <Sparkles className="h-8 w-8 text-[#d4af37]" />;
       case "body":
-        return <Droplets className="h-8 w-8 text-[#d4af37]" />
+        return <Droplets className="h-8 w-8 text-[#d4af37]" />;
       case "breast":
-        return <Heart className="h-8 w-8 text-[#d4af37]" />
+        return <Heart className="h-8 w-8 text-[#d4af37]" />;
       default:
-        return <Scissors className="h-8 w-8 text-[#d4af37]" />
+        return <Scissors className="h-8 w-8 text-[#d4af37]" />;
     }
-  }
+  };
 
   const filteredProcedures =
-    activeTab === "all" ? procedures : procedures.filter((procedure) => procedure.category === activeTab)
+    activeTab === "all"
+      ? procedures
+      : procedures.filter((procedure) => procedure.category === activeTab);
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -320,7 +335,7 @@ export default function AllProcedures() {
         duration: 0.3,
       },
     }),
-  }
+  };
 
   return (
     <div className="w-full">
@@ -328,7 +343,9 @@ export default function AllProcedures() {
         <button
           onClick={() => setActiveTab("all")}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "all" ? "bg-[#d4af37] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            activeTab === "all"
+              ? "bg-[#d4af37] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Todos
@@ -336,7 +353,9 @@ export default function AllProcedures() {
         <button
           onClick={() => setActiveTab("face")}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "face" ? "bg-[#d4af37] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            activeTab === "face"
+              ? "bg-[#d4af37] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Face
@@ -344,7 +363,9 @@ export default function AllProcedures() {
         <button
           onClick={() => setActiveTab("body")}
           className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-            activeTab === "body" ? "bg-[#d4af37] text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            activeTab === "body"
+              ? "bg-[#d4af37] text-white"
+              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
           }`}
         >
           Corpo
@@ -374,36 +395,44 @@ export default function AllProcedures() {
                 <div className="relative z-10 flex h-full flex-col items-center p-6 text-center">
                   <motion.div
                     className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#f8f5e6]"
-                    animate={hoveredCard === procedure.id ? { scale: 1.1, backgroundColor: "#f0e6b2" } : {}}
+                    animate={
+                      hoveredCard === procedure.id
+                        ? { scale: 1.1, backgroundColor: "#f0e6b2" }
+                        : {}
+                    }
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >
                     {getIcon(procedure.category)}
                   </motion.div>
 
-                  <h3 className="mb-3 text-xl font-bold text-[#2c3e50]">{procedure.title}</h3>
+                  <h3 className="mb-3 text-xl font-bold text-[#2c3e50]">
+                    {procedure.title}
+                  </h3>
 
-                  <p className="mb-6 flex-grow text-[#7f8c8d]">{procedure.shortDescription}</p>
+                  <p className="mb-6 flex-grow text-[#7f8c8d]">
+                    {procedure.shortDescription}
+                  </p>
 
-                  <motion.div
-                    className="mt-auto"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={hoveredCard === procedure.id ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.2 }}
-                  >
+                  {/* Sempre visível no mobile, animado no hover no desktop */}
+                  <div className="mt-auto opacity-100 transition-all duration-200 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0">
                     <button
                       onClick={() => openModal(procedure)}
-                      className="inline-flex items-center text-sm font-medium text-[#d4af37] hover:text-[#b8971f]"
+                      className="inline-flex items-center text-sm font-medium text-[#d4af37] hover:text-[#b8971f] transition-colors"
                     >
                       Saiba mais
                       <ArrowRight className="ml-1 h-4 w-4" />
                     </button>
-                  </motion.div>
+                  </div>
                 </div>
 
                 <motion.div
                   className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-[#d4af37] to-[#f0e6b2]"
                   initial={{ width: "0%" }}
-                  animate={hoveredCard === procedure.id ? { width: "100%" } : { width: "0%" }}
+                  animate={
+                    hoveredCard === procedure.id
+                      ? { width: "100%" }
+                      : { width: "0%" }
+                  }
                   transition={{ duration: 0.3 }}
                 />
               </motion.div>
@@ -422,5 +451,5 @@ export default function AllProcedures() {
         />
       )}
     </div>
-  )
+  );
 }

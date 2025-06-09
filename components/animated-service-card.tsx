@@ -1,17 +1,17 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Droplets, Scissors, Heart, Sparkles, ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Droplets, Scissors, Heart, Sparkles, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface AnimatedServiceCardProps {
-  title: string
-  description: string
-  icon: string
-  link?: string
-  index: number
-  onClick?: () => void
+  title: string;
+  description: string;
+  icon: string;
+  link?: string;
+  index: number;
+  onClick?: () => void;
 }
 
 export default function AnimatedServiceCard({
@@ -22,22 +22,22 @@ export default function AnimatedServiceCard({
   index,
   onClick,
 }: AnimatedServiceCardProps) {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isHovered, setIsHovered] = useState(false);
 
   const getIcon = () => {
     switch (icon) {
       case "Droplets":
-        return <Droplets className="h-8 w-8 text-[#d4af37]" />
+        return <Droplets className="h-8 w-8 text-[#d4af37]" />;
       case "Scissors":
-        return <Scissors className="h-8 w-8 text-[#d4af37]" />
+        return <Scissors className="h-8 w-8 text-[#d4af37]" />;
       case "Heart":
-        return <Heart className="h-8 w-8 text-[#d4af37]" />
+        return <Heart className="h-8 w-8 text-[#d4af37]" />;
       case "Sparkles":
-        return <Sparkles className="h-8 w-8 text-[#d4af37]" />
+        return <Sparkles className="h-8 w-8 text-[#d4af37]" />;
       default:
-        return <Droplets className="h-8 w-8 text-[#d4af37]" />
+        return <Droplets className="h-8 w-8 text-[#d4af37]" />;
     }
-  }
+  };
 
   return (
     <motion.div
@@ -55,10 +55,16 @@ export default function AnimatedServiceCard({
       >
         <div className="absolute inset-0 bg-gradient-to-br from-[#d4af37]/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
 
-        <div className="relative z-10 flex h-full flex-col items-center p-6 text-center">
+        <div
+          className="group relative z-10 flex h-full flex-col items-center p-6 text-center"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <motion.div
             className="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-[#f8f5e6]"
-            animate={isHovered ? { scale: 1.1, backgroundColor: "#f0e6b2" } : {}}
+            animate={
+              isHovered ? { scale: 1.1, backgroundColor: "#f0e6b2" } : {}
+            }
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             {getIcon()}
@@ -68,16 +74,12 @@ export default function AnimatedServiceCard({
 
           <p className="mb-6 flex-grow text-[#7f8c8d]">{description}</p>
 
-          <motion.div
-            className="mt-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isHovered ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.2 }}
-          >
+          {/* Sempre visível no mobile, animado no hover no desktop */}
+          <div className="mt-auto opacity-100 transition-all duration-200 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0">
             {onClick ? (
               <button
                 onClick={onClick}
-                className="inline-flex items-center text-sm font-medium text-[#d4af37] hover:text-[#b8971f]"
+                className="inline-flex items-center text-sm font-medium text-[#d4af37] hover:text-[#b8971f] transition-colors"
               >
                 Saiba mais
                 <ArrowRight className="ml-1 h-4 w-4" />
@@ -85,13 +87,13 @@ export default function AnimatedServiceCard({
             ) : (
               <Link
                 href={link}
-                className="inline-flex items-center text-sm font-medium text-[#d4af37] hover:text-[#b8971f]"
+                className="inline-flex items-center text-sm font-medium text-[#d4af37] hover:text-[#b8971f] transition-colors"
               >
                 Saiba mais
                 <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
             )}
-          </motion.div>
+          </div>
         </div>
 
         <motion.div
@@ -102,5 +104,5 @@ export default function AnimatedServiceCard({
         />
       </motion.div>
     </motion.div>
-  )
+  );
 }
