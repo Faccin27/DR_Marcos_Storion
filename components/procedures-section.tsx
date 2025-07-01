@@ -169,19 +169,19 @@ export default function ProceduresSection() {
 
   const featuredProcedures: Procedure[] = [
     {
-      title: "Lipo HD",
+      title: "Deep Plane",
       description:
-        "Lipoaspiração de alta definição para resultados mais precisos e naturais.",
-      fullDescription: `O Lipo HD é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
+        "Técnica avançada de rejuvenescimento facial com resultados naturais e duradouros.",
+      fullDescription: `O Deep Plane é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
   
-      Diferente das técnicas tradicionais, o Lipo HD reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
+      Diferente das técnicas tradicionais, o Deep Plane reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
   
       Esta técnica é especialmente eficaz para corrigir flacidez moderada a severa no terço médio da face, linha da mandíbula e pescoço, com resultados que podem durar de 8 a 12 anos.
   
       O Dr. Marcos Storion utiliza as técnicas mais modernas e seguras, garantindo resultados naturais que preservam as características individuais de cada paciente, evitando o aspecto "esticado" ou artificial.`,
       icon: "Droplets",
       index: 0,
-      image: "/images/lipo-hd.jpg",
+      image: "/images/deepplane.jpg",
     },
     {
       title: "Neck Lift",
