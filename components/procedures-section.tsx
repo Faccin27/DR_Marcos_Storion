@@ -181,7 +181,7 @@ export default function ProceduresSection() {
       O Dr. Marcos Storion utiliza as técnicas mais modernas e seguras, garantindo resultados naturais que preservam as características individuais de cada paciente, evitando o aspecto "esticado" ou artificial.`,
       icon: "Droplets",
       index: 0,
-      image: "/images/deepplane.jpg",
+      image: "/images/lipo-hd.jpg",
     },
     {
       title: "Neck Lift",
