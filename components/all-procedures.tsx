@@ -1,8 +1,8 @@
 "use client";
 
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight, Droplets, Heart, Scissors, Sparkles } from "lucide-react";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Droplets, Scissors, Heart, Sparkles } from "lucide-react";
 import ProcedureModal from "./procedure-modal";
 
 interface Procedure {
@@ -28,12 +28,12 @@ export default function AllProcedures() {
   const procedures: Procedure[] = [
     {
       id: "deep-plane-facelift",
-      title: "Deep Plane FaceLift",
+      title: "Deep Plane",
       shortDescription:
         "Técnica avançada de rejuvenescimento facial com resultados naturais e duradouros.",
-      fullDescription: `O Deep Plane FaceLift é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
+      fullDescription: `O Deep Plane é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
   
-      Diferente das técnicas tradicionais, o Deep Plane FaceLift reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
+      Diferente das técnicas tradicionais, o Deep Plane reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
   
       Esta técnica é especialmente eficaz para corrigir flacidez moderada a severa no terço médio da face, linha da mandíbula e pescoço, com resultados que podem durar de 8 a 12 anos.
   
@@ -174,6 +174,19 @@ export default function AllProcedures() {
   
       Os resultados proporcionam maior volume mamário, melhora na projeção e simetria dos seios, com consequente aumento da autoestima e satisfação com a imagem corporal.`,
       image: "/images/mamaaumento.jpeg",
+      category: "body",
+    },
+    {
+      id: "Lipo HD",
+      title: "Lipo HD",
+      shortDescription:
+        "Técnica avançada de lipoaspiração que define e evidencia a musculatura corporal, proporcionando contornos mais atléticos.",
+      fullDescription: `A Lipo HD (Lipoaspiração de Alta Definição) é uma evolução da lipoaspiração tradicional. Utilizando tecnologias modernas e técnicas precisas, ela remove a gordura localizada ao redor de grupos musculares estratégicos, realçando a anatomia natural do corpo e criando um aspecto mais atlético e definido.
+
+        É indicada para pacientes que já possuem bom tônus muscular, mas desejam maior definição corporal, destacando áreas como abdômen, peitoral, costas e braços. O procedimento requer avaliação detalhada para garantir a segurança e o melhor resultado estético, respeitando a harmonia e proporção corporal.
+
+        A Lipo HD pode ser associada ao enxerto de gordura (lipofilling) para melhorar ainda mais o contorno corporal. O pós-operatório inclui o uso de cintas modeladoras e drenagem linfática para otimizar a recuperação e o resultado final.`,
+      image: "/images/lipo-hd.jpg",
       category: "body",
     },
     {
