@@ -169,12 +169,12 @@ export default function ProceduresSection() {
 
   const featuredProcedures: Procedure[] = [
     {
-      title: "Deep Plane FaceLift",
+      title: "Lipo HD",
       description:
         "Lipoaspiração de alta definição para resultados mais precisos e naturais.",
-      fullDescription: `O Deep Plane FaceLift é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
+      fullDescription: `O Lipo HD é uma técnica cirúrgica avançada de rejuvenescimento facial que trabalha em camadas mais profundas da face, proporcionando resultados mais naturais e duradouros.
   
-      Diferente das técnicas tradicionais, o Deep Plane FaceLift reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
+      Diferente das técnicas tradicionais, o Lipo HD reposiciona os tecidos faciais em um plano mais profundo, tratando não apenas a pele, mas também o SMAS (Sistema Músculo-Aponeurótico Superficial) e os ligamentos faciais.
   
       Esta técnica é especialmente eficaz para corrigir flacidez moderada a severa no terço médio da face, linha da mandíbula e pescoço, com resultados que podem durar de 8 a 12 anos.
   
