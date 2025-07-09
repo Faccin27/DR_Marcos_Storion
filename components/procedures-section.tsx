@@ -193,22 +193,26 @@ export default function ProceduresSection() {
       image: "/images/necklift.png",
     },
     {
-      title: "FaceLift",
-      description:
-        "Procedimento clássico de rejuvenescimento facial que combate sinais de envelhecimento e flacidez.",
-      fullDescription: `O FaceLift tradicional, também conhecido como ritidoplastia, é um procedimento cirúrgico que visa rejuvenescer a face através da remoção do excesso de pele e reposicionamento dos tecidos faciais. A técnica envolve incisões discretas ao redor das orelhas, permitindo ao cirurgião tratar a flacidez da pele e do SMAS (Sistema Músculo-Aponeurótico Superficial), resultando em uma aparência mais jovem e descansada. Ideal para pacientes com sinais moderados a avançados de envelhecimento facial, o FaceLift trata principalmente o terço inferior da face e pescoço, melhorando o contorno mandibular e reduzindo os sulcos nasolabiais. O Dr. Marcos Storion adapta a técnica às necessidades específicas de cada paciente, garantindo resultados naturais que respeitam as características individuais, com duração média de 5 a 8 anos.`,
-      icon: "Heart",
-      index: 2,
-      image: "/images/FaceLift.jpeg",
-    },
-    {
       title: "Blefaroplastia",
       description:
         "Cirurgia para rejuvenescimento das pálpebras, removendo excesso de pele e bolsas de gordura.",
       fullDescription: `A Blefaroplastia é uma cirurgia plástica focada no rejuvenescimento da região dos olhos, tratando o excesso de pele nas pálpebras superiores e/ou inferiores, além das bolsas de gordura que causam aspecto de cansaço e envelhecimento. Nas pálpebras superiores, o procedimento remove o excesso de pele que pode até mesmo interferir na visão em casos mais severos. Nas pálpebras inferiores, são tratadas as bolsas de gordura e a flacidez cutânea. As incisões são realizadas em locais estratégicos que seguem as dobras naturais da pálpebra, tornando as cicatrizes praticamente imperceptíveis após a cicatrização completa. Os resultados incluem um olhar mais descansado, jovem e expressivo, com recuperação relativamente rápida de aproximadamente 7 a 10 dias para retorno às atividades sociais.`,
       icon: "Sparkles",
-      index: 3,
+      index: 33,
       image: "/images/blefaroplastia.jpg",
+    },
+    {
+      title: "Lipo HD",
+      description:
+        "Técnica avançada de lipoaspiração que define e evidencia a musculatura corporal, proporcionando contornos mais atléticos.",
+      fullDescription: `A Lipo HD (Lipoaspiração de Alta Definição) é uma evolução da lipoaspiração tradicional. Utilizando tecnologias modernas e técnicas precisas, ela remove a gordura localizada ao redor de grupos musculares estratégicos, realçando a anatomia natural do corpo e criando um aspecto mais atlético e definido.
+
+        É indicada para pacientes que já possuem bom tônus muscular, mas desejam maior definição corporal, destacando áreas como abdômen, peitoral, costas e braços. O procedimento requer avaliação detalhada para garantir a segurança e o melhor resultado estético, respeitando a harmonia e proporção corporal.
+
+        A Lipo HD pode ser associada ao enxerto de gordura (lipofilling) para melhorar ainda mais o contorno corporal. O pós-operatório inclui o uso de cintas modeladoras e drenagem linfática para otimizar a recuperação e o resultado final.`,
+      icon: "Heart",
+      index: 2,
+      image: "/images/lipo-hd.jpg",
     },
   ];
 
