@@ -198,7 +198,7 @@ export default function ProceduresSection() {
         "Cirurgia para rejuvenescimento das pálpebras, removendo excesso de pele e bolsas de gordura.",
       fullDescription: `A Blefaroplastia é uma cirurgia plástica focada no rejuvenescimento da região dos olhos, tratando o excesso de pele nas pálpebras superiores e/ou inferiores, além das bolsas de gordura que causam aspecto de cansaço e envelhecimento. Nas pálpebras superiores, o procedimento remove o excesso de pele que pode até mesmo interferir na visão em casos mais severos. Nas pálpebras inferiores, são tratadas as bolsas de gordura e a flacidez cutânea. As incisões são realizadas em locais estratégicos que seguem as dobras naturais da pálpebra, tornando as cicatrizes praticamente imperceptíveis após a cicatrização completa. Os resultados incluem um olhar mais descansado, jovem e expressivo, com recuperação relativamente rápida de aproximadamente 7 a 10 dias para retorno às atividades sociais.`,
       icon: "Sparkles",
-      index: 33,
+      index: 2,
       image: "/images/blefaroplastia.jpg",
     },
     {
@@ -211,7 +211,7 @@ export default function ProceduresSection() {
 
         A Lipo HD pode ser associada ao enxerto de gordura (lipofilling) para melhorar ainda mais o contorno corporal. O pós-operatório inclui o uso de cintas modeladoras e drenagem linfática para otimizar a recuperação e o resultado final.`,
       icon: "Heart",
-      index: 2,
+      index: 3,
       image: "/images/lipo-hd.jpg",
     },
   ];
